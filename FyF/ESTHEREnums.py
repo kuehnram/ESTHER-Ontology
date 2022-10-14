@@ -7,7 +7,6 @@ class Operation(Enum):
     REPETITION = "Repetition"
     CONVERSION = "Conversion"
     REPLACEMENT = "Replacement"
-    NONE = "None"
     QM = "?"
 
 
@@ -20,7 +19,6 @@ class LinguisticElement(Enum):
     PHRASE = "Phrase"
     VERSE = "Verse"
     PUNCTUATION = "Punctuation"
-    NONE = "None"
     QM = "?"
 
 
@@ -30,7 +28,6 @@ class LinguisticObject(Enum):
     SAME_MEANING = "Same meaning"
     DIFFERENT_MEANING = "Different meaning"
     OPPOSED_MEANING = "Opposed meaning"
-    NONE = "None"
     QM = "?"
 
 

@@ -34,7 +34,21 @@ def user_inputter():
             print(error_message.format("operation"))
             continue
         else:
+            if operation == Operation.QM.value:
+                operation = "_"
             break
+
+    # Area and Linguistic Elements are the same, except for the Element at the end of the thing
+    while True:
+        area = input(f"In which area does {operation} occur ({linguistic_element_enum_string}): ").capitalize().strip()
+        if area not in [member.value for member in LinguisticElement]:
+            print(error_message.format("area"))
+            continue
+        else:
+            if area == LinguisticElement.QM.value:
+                area = "_"
+            break
+
     while True:
         linguistic_element = input(
             f"Linguistic Element: {operation} of ({linguistic_element_enum_string}): ").capitalize().strip()
@@ -42,6 +56,11 @@ def user_inputter():
             print(error_message.format("linguistic element)"))
             continue
         else:
+            if linguistic_element == LinguisticElement.QM.value:
+                linguistic_element = "_"
+            else:
+                if linguistic_element != LinguisticElement.LETTER.value:
+                    linguistic_element += "Element"
             break
 
     while True:
@@ -51,6 +70,8 @@ def user_inputter():
             print(error_message.format("linguistic object"))
             continue
         else:
+            if linguistic_object == LinguisticObject.QM.value:
+                linguistic_object = "_"
             break
     while True:
         position = input(f"Position: {operation} at the ({position_enum_string}): ").capitalize().strip()
@@ -58,37 +79,109 @@ def user_inputter():
             print(error_message.format("position"))
             continue
         else:
-            print(
-                f"...Searching for figures with {operation} of a {linguistic_element} in {linguistic_object} at the {position}...")
-            query_builder(operation, linguistic_element, linguistic_object, position)
+            if position == Position.QM.value:
+                position = "_"
+            break
+
+    print(
+        f"...Searching for figures with {operation} of a {linguistic_element} in {linguistic_object} at the {position}...")
+    query_builder(operation, area, linguistic_element, linguistic_object, position)
 
 
-def query_builder(operation, linguistic_element, linguistic_object, position):
+def query_builder(operation, area, linguistic_element, linguistic_object, position):
     # https://stackoverflow.com/questions/53492632/how-to-use-python-variables-inside-a-sparql-ontology-query
-    if operation == Operation.REPETITION and linguistic_object == LinguisticObject.SAME_FORM:
+
+    if operation == Operation.REPETITION.value and linguistic_object == LinguisticObject.SAME_FORM.value:
         operation = "IsRepeatableElementOfSameForm"
-    linguistic_element += "Element"
+    if operation == Operation.REPETITION.value and linguistic_object == LinguisticObject.DIFFERENT_FORM.value:
+        operation = "IsRepeatableElementOfDifferentForm"
+    if operation == Operation.OMISSION.value:
+        operation = "IsOmitted"
+    if operation == Operation.REPLACEMENT.value and linguistic_object == LinguisticObject.SAME_MEANING:
+        operation = "IsReplacedByAnotherElementOfSameMeaning"
+    if operation == Operation.REPLACEMENT.value and linguistic_object == LinguisticObject.DIFFERENT_FORM.value:
+        operation = "IsReplacedByAnotherElementOfDifferentForm"
 
     esther_query_parts = []
-    select = "SELECT distinct ?Figure"
+    select = "SELECT DISTINCT ?Figure"
     where = "WHERE {"
-    statement_area = "?Figure esther:IsInArea ?Area. ?Area rdfs:label ?AreaName ."
-    statement_position = "?Figure esther:IsInPosition ?Position. ?Position rdfs:label ?PositionName ."
+    statement_area = "?Figure esther:IsInArea ?Area . "
+    statement_area_name = "?Area rdfs:label ?AreaName ."
+    statement_position = "?Figure esther:IsInPosition ?Position. "
+    statement_position_name = "?Position rdfs:label ?PositionName ."
+    statement_operation = "?Figure esther:" + operation + " ?LinguisticElement ."
+    statement_operation_name = "?LinguisticElement rdfs:label ?LingElementName ."
     filter = "FILTER ("
-    filter_area = "?AreaName ='" + linguistic_element + "' && ?PositionName = '" + position + "'"
+    and_bool = " && "
+    # if area == "_":
+    #     filter_area = "?AreaName = _"
+    # else:
+    filter_area = "?AreaName ='" + area + "' "
+    # if position == "_":
+    #     filter_position = "?PositionName = _"
+    # else:
+    filter_position = "?PositionName = '" + position + "'"
+    # if linguistic_element == "_":
+    #     filter_ling_elem = "?LingElementName = _"
+    # else:
+    filter_ling_elem = "?LingElementName = '" + linguistic_element + "'"
     closing_filter = ")"
     closing_query = "}"
 
     esther_query_parts.append(select)
     esther_query_parts.append(where)
-    esther_query_parts.append(statement_area)
-    esther_query_parts.append(statement_position)
-    esther_query_parts.append(filter)
-    esther_query_parts.append(filter_area)
-    esther_query_parts.append(closing_filter)
+    if area != "_":
+        esther_query_parts.append(statement_area)
+        esther_query_parts.append(statement_area_name)
+    else:
+        esther_query_parts.append(statement_area)
+
+    if position != "_":
+        esther_query_parts.append(statement_position)
+        esther_query_parts.append(statement_position_name)
+    else:
+        esther_query_parts.append(statement_position)
+    if operation != "_":
+        esther_query_parts.append(statement_operation)
+        esther_query_parts.append(statement_operation_name)
+    else:
+        esther_query_parts.append(statement_operation)
+
+    if area != "_" and position != "_" and operation != "_":
+        esther_query_parts.append(filter)
+    if area != "_":
+        esther_query_parts.append(filter_area)
+        esther_query_parts.append(and_bool)
+    if position != "_":
+        esther_query_parts.append(filter_position)
+        esther_query_parts.append(and_bool)
+    if linguistic_element != "_":
+        print(linguistic_element, "hier ling element")
+        esther_query_parts.append(filter_ling_elem)
+
+    if area != "_" and position != "_" and operation != "_":
+        esther_query_parts.append(closing_filter)
     esther_query_parts.append(closing_query)
     esther_query = "\n".join(esther_query_parts)
 
+    print(esther_query)
+    moon_query = """
+        SELECT distinct ?Figure ?form
+        WHERE {
+        
+            ?Figure esther:IsOmitted ?form
+            }
+        """
+    # moon_query = """
+    # SELECT distinct ?Figure ?form
+    # WHERE {
+    #     ?Figure esther:IsInArea ?Area .
+    #     ?Figure esther:IsInPosition ?position .
+    #     ?Figure esther:IsOmitted ?form
+    #     }
+    # """
+
+    # execute_normal_query(moon_query)
     execute_query(esther_query)
 
 
