@@ -1,6 +1,7 @@
 import re
 from ESTHEREnums import *
 import rdflib as rdflib
+from itertools import islice
 
 g = rdflib.Graph()
 ontology = "esther"
@@ -11,6 +12,11 @@ esther = rdflib.Namespace('https://anonymous.org/')
 g.bind('esther', esther)
 
 error_message = "Invalid {}. Please choose one from the list above."
+
+
+def take(n, iterable):
+    "Return first n items of the iterable as a list"
+    return list(islice(iterable, n))
 
 
 def build_enum_string(enum_class):
@@ -192,44 +198,95 @@ def execute_query(esther_query):
     # print(RDFS['label'])
     # print(OWL.title)
     # print(RDFS.uri)
-    print(f"Following {len(result)} figures fit your description:")
+    result_length = len(result)
+    if result_length > 0:
+        print(f"Following {result_length} figures fit your description:")
 
-    for row in result:
-        row = str(row)
-        row = re.sub(r'^.*?#', '', row)
-        row = row[:-4]
-        print(row)
+        for row in result:
+            row = str(row)
+            row = re.sub(r'^.*?#', '', row)
+            row = row[:-4]
+            print(row)
 
-        definition = """
-           SELECT distinct ?Figure ?Definition ?Value
-           WHERE {
-               ?Figure rdfs:label ?FigureName .
-               ?Figure rdfs:comment ?Value
-               Filter (?FigureName = '""" + row + "') } """
-        definition_result = g.query(definition)
-        pretty_print_text(definition_result, "DEFINITION")
+            definition = """
+               SELECT distinct ?Figure ?Definition ?Value
+               WHERE {
+                   ?Figure rdfs:label ?FigureName .
+                   ?Figure rdfs:comment ?Value
+                   Filter (?FigureName = '""" + row + "') } """
+            definition_result = g.query(definition)
+            pretty_print_text(definition_result, "DEFINITION")
 
-        example_sentence = """
-        SELECT distinct ?Figure ?Example ?Value
-        WHERE   {
-        ?Figure   rdfs:label ?FigureName.
-        ?Figure   esther:IsExample ?Value
-        Filter(?FigureName = '""" + row + "')}"""
-        example_result = g.query(example_sentence)
-        pretty_print_text(example_result, "EXAMPLE")
-        print("\n")
+            example_sentence = """
+            SELECT distinct ?Figure ?Example ?Value
+            WHERE   {
+            ?Figure   rdfs:label ?FigureName.
+            ?Figure   esther:IsExample ?Value
+            Filter(?FigureName = '""" + row + "')}"""
+            example_result = g.query(example_sentence)
+            pretty_print_text(example_result, "EXAMPLE")
+            print("\n")
+
+    else:
+        free_text_search()
+        print("No figure matches the provided properties: Try to type comma-separated keywords:")
+        keywords = input(f"Comma-separated keywords: ")
+        keywords = keywords.split(",")
+        for elem in keywords:
+            print(elem)
 
 
+# SELECT  ?title
+# WHERE
+# { ?x
+# dc: title ?title
+# FILTER
+# regex(?title, "web", "i" )
+# }
+def free_text_search():
+    print("No figure matches the provided properties: Try to type comma-separated keywords:")
+    keywords = input(f"Comma-separated keywords: ")
+    keywords = keywords.split(",")
+    keywords = [elem.strip() for elem in keywords]
 
-    #  todo if empty: search for definition
+    get_all_figure_definitions = """
+               SELECT distinct ?Figure ?Definition ?Value
+               WHERE {
+                   ?Figure rdfs:comment ?Value . } """
+    all_figure_definitions = g.query(get_all_figure_definitions)
 
-    # SELECT  ?title
-    # WHERE
-    # { ?x
-    # dc: title ?title
+    # blub = """ SELECT  ?title
+    # WHERE    { ?x   rdfs:comment ?title
     # FILTER
-    # regex(?title, "web", "i" )
+    # regex(?title, "interconnectedness", "cohesive"  )
     # }
+    # """
+
+    possible_candidates_dict = {}  # Dict[str, int] = Dict[definition is key, number of occurence of the keywords]
+    for definition in all_figure_definitions:
+        for keyword in keywords:
+            if str(keyword).lower() in str(definition).lower():
+                if definition in possible_candidates_dict:
+                    possible_candidates_dict[definition] += 1
+                else:
+                    possible_candidates_dict[definition] = 1
+
+    if len(possible_candidates_dict) > 0:
+        # Sort descending, definition with most matches has the highest number
+        sorted_dict = dict(sorted(possible_candidates_dict.items(),
+                                  key=lambda item: item[1],
+                                  reverse=True))
+
+        # print top elements of sorted_dict
+        n_items = take(3, sorted_dict.items())
+
+        # todo pretty print
+        # for key, value in n_items:
+        #    pretty_print_text()
+
+
+    else:
+        print("Sorry, no match found!")
 
 
 def execute_normal_query(query):
@@ -241,8 +298,11 @@ def execute_normal_query(query):
 
 def main():
     # execute_normal_query(blub)
-    print("Welcome to Find your Figure! Please specify the following characteristics.\n")
-    user_inputter()
+    print("Welcome to Find your Figure! Please specify the following characteristics.")
+
+    free_text_search()
+
+    # user_inputter()
 
 
 if __name__ == '__main__':

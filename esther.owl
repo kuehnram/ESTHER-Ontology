@@ -949,7 +949,7 @@ So take your time, and tell me when you will (Silva Rhetoricae)</esther:IsExampl
         <esther:IsInPosition rdf:resource="https://anonymous.org/esther.owl#Whole"/>
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Semantical"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#Trope"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chocolate was her Achilles’ heel</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chocolate was her Achilles' heel</esther:IsExample>
         <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">We've got an Einstein over here</esther:IsExample>
         <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is America facing a second Vietnam? (Article of the FAZ)</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allusion</esther:Name>
@@ -1021,7 +1021,7 @@ So take your time, and tell me when you will (Silva Rhetoricae)</esther:IsExampl
         <esther:IsInObject rdf:resource="https://anonymous.org/esther.owl#Sentence"/>
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Semantical"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfThought"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Earth’s climate has indeed changed over time – time that is measured in eons rather than years (McGuigan)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Earth's climate has indeed changed over time – time that is measured in eons rather than years (McGuigan)</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amplification</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What was said is repeated while more detail and information is added to the original description. (McGuigan)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amplification</rdfs:label>
@@ -2383,9 +2383,9 @@ Returning to and providing additional detail for items mentioned previously (oft
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Phonetic"/>
         <esther:IsRepeatableElementOfSameForm rdf:resource="https://anonymous.org/esther.owl#Letter"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfSpeech"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">He is esteemed eloquent which can invent wittily, remember perfectly, dispose orderly, figure diversly [sic], pronounce aptly, confirme strongly, and conclude directly —Peacham</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">He is esteemed eloquent which can invent wittily, remember perfectly, dispose orderly, figure diversly [sic], pronounce aptly, confirme strongly, and conclude directly (Peacham)</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Homoioteleuton</esther:Name>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">  Similarity of endings of adjacent or parallel words. (Silva Rhetoricae) </rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Similarity of endings of adjacent or parallel words. (Silva Rhetoricae) </rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Homoioteleuton</rdfs:label>
         <rdfs:seeAlso xml:lang="de">Homoeteleuton</rdfs:seeAlso>
         <rdfs:seeAlso xml:lang="de">Homoioteleuton</rdfs:seeAlso>
@@ -3159,7 +3159,7 @@ centre becomes center</esther:IsExample>
         <esther:IsReplacedByAnotherElementOfSameMeaning rdf:resource="https://anonymous.org/esther.owl#PhraseElement"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#Trope"/>
         <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">He's no Fabio to look at; but then, he's no Woody Allen, either. (Silva Rhetoricae)</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mender of bad soles; for shoemaker</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mender of bad soles for shoemaker</esther:IsExample>
         <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In the TV show "Dinosaurs" the infant dino called his father, "Not-the-Mama." (Silva Rhetoricae)</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Periphrasis</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The substitution of a descriptive word or phrase for a proper name (a species of circumlocution); or, conversely, the use of a proper name as a shorthand to stand for qualities associated with it. (Silva Rhetoricae)</rdfs:comment>
@@ -3780,7 +3780,7 @@ Rend your heart, and not your garments. Joel 2:13 (Silva Rhetoricae)</esther:IsE
         <esther:IsReplacedByAnotherElementOfSameMeaning rdf:resource="https://anonymous.org/esther.owl#PhraseElement"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#Trope"/>
         <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Austria wins the games (instead of: the austrian team)</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The captain shouted, ‘All hands on deck.’ (McGuigan) (hands instead of crew members)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The captain shouted, "All hands on deck." (McGuigan) (hands instead of crew members)</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Synecdoche</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Synecdoche is the use of a part of something to represent the whole. (McGuigan)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Synecdoche</rdfs:label>
@@ -3891,8 +3891,7 @@ Rend your heart, and not your garments. Joel 2:13 (Silva Rhetoricae)</esther:IsE
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Syntactic"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfConstruction"/>
         <esther:Separates rdf:resource="https://anonymous.org/esther.owl#SentenceElement"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In the following sentence the word appear occurs between the two words that make up the compound hereafter.
-This is the place where Christ will come, as will here appear after.</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In the following sentence the word appear occurs between the two words that make up the compound hereafter. This is the place where Christ will come, as will here appear after.</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tmesis</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interjecting a word or phrase between parts of a compound word or between syllables of a word. (Silva Rhetoricae)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tmesis</rdfs:label>
