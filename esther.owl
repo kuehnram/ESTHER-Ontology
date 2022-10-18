@@ -762,8 +762,8 @@ email: a@b.c</rdfs:comment>
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Semantical"/>
         <esther:IsReplacedByElementOfOppositeMeaning rdf:resource="https://anonymous.org/esther.owl#WordElement"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#Trope"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">“I couldn&apos;t possibly take such charity from you..” (Silva Rhetoricae)</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">“I really cannot take this present!”</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I couldn't possibly take such charity from you. (Silva Rhetoricae)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I really cannot take this present!</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accismus</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A feigned refusal of that which is earnestly desired. (Silva Rhetoricae)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accismus</rdfs:label>
@@ -797,7 +797,7 @@ email: a@b.c</rdfs:comment>
         <esther:IsInPosition rdf:resource="https://anonymous.org/esther.owl#WholeSubsequent"/>
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Semantical"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfSpeech"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;a silent, thin, smart man&quot;</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a silent, thin, smart man</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accumulatio</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bringing together various points made throughout a speech and presenting them again in a forceful, climactic way. A blend of summary and climax. (Silva Rhetoricae)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accumulatio</rdfs:label>
@@ -909,14 +909,14 @@ So take your time, and tell me when you will (Silva Rhetoricae)</esther:IsExampl
         <esther:IsInArea rdf:resource="https://anonymous.org/esther.owl#Verse"/>
         <esther:IsInObject rdf:resource="https://anonymous.org/esther.owl#SentenceObject"/>
         <esther:IsInObject rdf:resource="https://anonymous.org/esther.owl#VerseObject"/>
-        <esther:IsInPosition rdf:resource="https://anonymous.org/esther.owl#Whole"/>
+        <esther:IsInPosition rdf:resource="https://anonymous.org/esther.owl#Beginning"/>
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Phonetic"/>
-        <esther:IsRepeated rdf:resource="https://anonymous.org/esther.owl#Consonant"/>
+        <esther:IsRepeatableElementOfSameForm rdf:resource="https://anonymous.org/esther.owl#Consonant"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfSpeech"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Mail. Message. More&quot; (Advertisement; with Assonance)</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Two terrible tigers.</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mail. Message. More (Advertisement; with Assonance)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Two terrible tigers.</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alliteration</esther:Name>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Repeition of the same sound of nearby words or within a group of words.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Repetition of the same sound of nearby words or within a group of words.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alliteration</rdfs:label>
         <rdfs:seeAlso xml:lang="sr">Aliteracija</rdfs:seeAlso>
         <rdfs:seeAlso xml:lang="de">Alliteration</rdfs:seeAlso>
@@ -949,9 +949,9 @@ So take your time, and tell me when you will (Silva Rhetoricae)</esther:IsExampl
         <esther:IsInPosition rdf:resource="https://anonymous.org/esther.owl#Whole"/>
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Semantical"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#Trope"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Chocolate was her Achilles’ heel&quot;</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;We&apos;ve got an Einstein over here&quot;</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">“Is America facing a second Vietnam?” (Article of the FAZ)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chocolate was her Achilles’ heel</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">We've got an Einstein over here</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is America facing a second Vietnam? (Article of the FAZ)</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allusion</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allusions reference a well-known event/place/person. It helps to see a broader picture, or to evoke positive/negative feelings, or to add credibility. Requires the audience to understand the reference. (McGuigan)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allusion</rdfs:label>
@@ -986,7 +986,7 @@ So take your time, and tell me when you will (Silva Rhetoricae)</esther:IsExampl
         <esther:IsOmitted rdf:resource="https://anonymous.org/esther.owl#WordElement"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#Trope"/>
         <esther:Moves rdf:resource="https://anonymous.org/esther.owl#WordElement"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Mercedes - a good star on all streets&quot; (Advertisement)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mercedes - a good star on all streets (Advertisement)</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amphiboly</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ambiguity of grammatical structure, often occasioned by mispunctuation. (Silva Rhetoricae)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amphiboly</rdfs:label>
@@ -1021,7 +1021,7 @@ So take your time, and tell me when you will (Silva Rhetoricae)</esther:IsExampl
         <esther:IsInObject rdf:resource="https://anonymous.org/esther.owl#Sentence"/>
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Semantical"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfThought"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">“The Earth’s climate has indeed changed over time – time that is measured in eons rather than years” (McGuigan)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Earth’s climate has indeed changed over time – time that is measured in eons rather than years (McGuigan)</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amplification</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What was said is repeated while more detail and information is added to the original description. (McGuigan)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amplification</rdfs:label>
@@ -1129,7 +1129,7 @@ So take your time, and tell me when you will (Silva Rhetoricae)</esther:IsExampl
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Syntactic"/>
         <esther:IsRepeatableElementOfSameForm rdf:resource="https://anonymous.org/esther.owl#WordElement"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfSpeech"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">“I have a dream that one day […]. I have a dream […]” (Martin Luther King)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I have a dream that one day […]. I have a dream […] (Martin Luther King)</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anaphora</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Repetition of a word/phrase at the beginning of multiple sentences. (McGuigan)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anaphora</rdfs:label>
@@ -1161,7 +1161,7 @@ So take your time, and tell me when you will (Silva Rhetoricae)</esther:IsExampl
         <esther:IsInPosition rdf:resource="https://anonymous.org/esther.owl#Whole"/>
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Syntactic"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfSpeech"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;She looked at the sky dark and menacing.&quot;(Silva Rhetoricae)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">She looked at the sky dark and menacing. (Silva Rhetoricae)</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anastrophe</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Departure from normal word order for the sake of emphasis.
 Anastrophe is most often a synonym for hyperbaton, but is occasionally referred to as a more specific instance of hyperbaton: the changing of the position of only a single word. (Silva Rhetoricae)</rdfs:comment>
@@ -1200,7 +1200,7 @@ Anastrophe is most often a synonym for hyperbaton, but is occasionally referred 
         <esther:IsRepeatableElementOfDifferentForm rdf:resource="https://anonymous.org/esther.owl#WordElement"/>
         <esther:IsRepeatableElementOfSameForm rdf:resource="https://anonymous.org/esther.owl#WordElement"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfThought"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">“First we lost the world, then the city, then the village.&quot;</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">First we lost the world, then the city, then the village.</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anticlimax</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Downwards gradatio</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anticlimax</rdfs:label>
@@ -1234,9 +1234,9 @@ Anastrophe is most often a synonym for hyperbaton, but is occasionally referred 
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Syntactic"/>
         <esther:IsReplacedByAnotherElementOfDifferentKind rdf:resource="https://anonymous.org/esther.owl#WordElement"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfConstruction"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Billionaires need the working class. The working class does not need billionaires.&quot; (Alexandria Ocasio-Cortez (onTwitter)
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Billionaires need the working class. The working class does not need billionaires. (Alexandria Ocasio-Cortez (onTwitter)
 (Antithetical Antimetabole)</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">“Don&apos;t ask what your country can do for you, ask what you can do for your country&quot; (John F. Kennedy)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Don't ask what your country can do for you, ask what you can do for your country (John F. Kennedy)</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Antimetabole</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Repetition of words, in successive clauses, in reverse grammatical order.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Antimetabole</rdfs:label>
@@ -1271,8 +1271,8 @@ Anastrophe is most often a synonym for hyperbaton, but is occasionally referred 
         <esther:IsInPosition rdf:resource="https://anonymous.org/esther.owl#Whole"/>
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Semantical"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfThought"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Less is more&quot;</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;One small step for a man, a giant leap for mankind&quot; (Neil Armstrong)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Less is more</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">One small step for a man, a giant leap for mankind (Neil Armstrong)</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Antithesis</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Antithesis shows contrast in ideas by using contrasting words. It has a natural beauty to the human ear because antithesis organizes ideas that they are evocative and powerful. Often, the two parts of a sentence have a parallel structure. Both opposing key words or whole sentences are possible (McGuigan)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Antithesis</rdfs:label>
@@ -1310,9 +1310,9 @@ Anastrophe is most often a synonym for hyperbaton, but is occasionally referred 
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Semantical"/>
         <esther:IsReplacedByAnotherElementOfSameMeaning rdf:resource="https://anonymous.org/esther.owl#WordElement"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#Trope"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;City of Seven Hills&quot; instead of Rome</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;He proved a Judas to the cause. &quot; (Silva Rhetoricae)</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;The holy land&quot; instead of Israel&quot;</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">City of Seven Hills instead of Rome</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">He proved a Judas to the cause.  (Silva Rhetoricae)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The holy land instead of Israel</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Antonomasia</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Substituting a descriptive phrase for a proper name, or substituting a proper name for a quality associated with it. (=periphrasis). (Silva Rhetoricae)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Antonomasia</rdfs:label>
@@ -1345,10 +1345,10 @@ Anastrophe is most often a synonym for hyperbaton, but is occasionally referred 
         <esther:IsOmitted rdf:resource="https://anonymous.org/esther.owl#Letter"/>
         <esther:IsOppositeFigure rdf:resource="https://anonymous.org/esther.owl#Apocope"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfConstruction"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;The king hath cause to &apos;plain&quot; (Shakespeare&apos;s King Lear)</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What&apos;s the third R? Rithmetic!</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The king hath cause to 'plain. (Shakespeare's King Lear)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What's the third R? Rithmetic!</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aphaeresis</esther:Name>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The omission of a syllable or letter at the beginning of a word.(Silva Rhetoricae)</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The omission of a syllable or letter at the beginning of a word. (Silva Rhetoricae)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aphaeresis</rdfs:label>
         <rdfs:seeAlso xml:lang="sr">Afereza</rdfs:seeAlso>
         <rdfs:seeAlso xml:lang="de">Aphaerese</rdfs:seeAlso>
@@ -1381,7 +1381,7 @@ Anastrophe is most often a synonym for hyperbaton, but is occasionally referred 
         <esther:IsOppositeFigure rdf:resource="https://anonymous.org/esther.owl#Aphaeresis"/>
         <esther:IsOppositeFigure rdf:resource="https://anonymous.org/esther.owl#Prothesis"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfConstruction"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">When Maro says &quot;Achilli&quot; for &quot;Achillis&quot;</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">When Maro says Achilli for Achillis</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apocope</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Omitting a letter or syllable at the end of a word</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apocope</rdfs:label>
@@ -1416,9 +1416,9 @@ Anastrophe is most often a synonym for hyperbaton, but is occasionally referred 
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Syntactic"/>
         <esther:IsReplacedByAnotherElementOfTransferredMeaning rdf:resource="https://anonymous.org/esther.owl#PunctuationMark"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfThought"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Did you...?&quot;</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;If I get my hands on you...&quot;</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;“Have you..?”</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Did you...?</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">If I get my hands on you...</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Have you..?</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aposiopesis</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Breaking off suddenly in the middle of speaking, usually to portray being overcome with emotion. (Silva Rhetoricae)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aposiopesis</rdfs:label>
@@ -1454,8 +1454,8 @@ Anastrophe is most often a synonym for hyperbaton, but is occasionally referred 
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Pragmatic"/>
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Semantical"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfThought"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">“Oh god,what a mess”</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">“The sun set over Paris - Paris my first love&quot; (McGuigan)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oh god,what a mess</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The sun set over Paris - Paris my first love (McGuigan)</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apostrophe</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apostrophe breaks out of the flow to address a person or personified object. It is a forceful and emotional figure. (McGuigan)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apostrophe</rdfs:label>
@@ -1524,8 +1524,8 @@ Anastrophe is most often a synonym for hyperbaton, but is occasionally referred 
         <esther:IsInPosition rdf:resource="https://anonymous.org/esther.owl#WholeSuccessiveWithoutConjunction"/>
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Syntactic"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfConstruction"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Going fast, they leave the road, they enter the fields.&quot;</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Veni, Vidi, Vici&quot;</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Going fast, they leave the road, they enter the fields.</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Veni, Vidi, Vici</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asyndeton</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asyndeton leaves out conjunctions in a list or between clauses. It gives a feeling if fast movement. (McGuigan)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asyndeton</rdfs:label>
@@ -1610,10 +1610,10 @@ Anastrophe is most often a synonym for hyperbaton, but is occasionally referred 
         <esther:IsInPosition rdf:resource="https://anonymous.org/esther.owl#WholeSubsequent"/>
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Semantical"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#Trope"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">“I do not ask much:
-I beg cold comfort …”</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I do not ask much:
+I beg cold comfort …</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Catachresis</esther:Name>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The use of a word in a context that differs from its proper application. (Silva Rhetoricae) Also called dead metaphors (Berner)</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The use of a word in a context that differs from its proper application. (Silva Rhetoricae) Also called dead metaphors. (Berner)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Catachresis</rdfs:label>
         <rdfs:seeAlso xml:lang="de">Katachrese</rdfs:seeAlso>
         <rdfs:seeAlso xml:lang="sr">Katahreza</rdfs:seeAlso>
@@ -1645,9 +1645,9 @@ I beg cold comfort …”</esther:IsExample>
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Semantical"/>
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Syntactic"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfConstruction"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;It is boring to eat; to sleep is fulfilling&quot; (Silva Rhetoricae)</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;The city is big, small is the wage&quot;</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">“Die Kunst ist lang, und kurz ist unser Leben” (Goethe: Faust)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">It is boring to eat; to sleep is fulfilling (Silva Rhetoricae)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The city is big, small is the wage</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The art is long, and short is our life. (Goethe: Faust)</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chiasmus</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Repetition of ideas in inverted order
 Repetition of grammatical structures in inverted order.(Silva Rhetoricae)</rdfs:comment>
@@ -1686,9 +1686,9 @@ Repetition of grammatical structures in inverted order.(Silva Rhetoricae)</rdfs:
         <esther:IsUnionOf rdf:resource="https://anonymous.org/esther.owl#Anadiplosis"/>
         <esther:IsUnionOf rdf:resource="https://anonymous.org/esther.owl#Gradatio"/>
         <esther:IsUnionOf rdf:resource="https://anonymous.org/esther.owl#Incrementum"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;The message was spread in every village, every city, every country.&quot;</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">“Curiosity leads to discovery, lead to knowledge, leads to wisdom” (McGuigan)</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">“From concept, to plan, to fully developed paper” (McGuigan)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The message was spread in every village, every city, every country.</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Curiosity leads to discovery, lead to knowledge, leads to wisdom. (McGuigan)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">From concept, to plan, to fully developed paper. (McGuigan)</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Climax</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Climax organizes ideas from the least to the most important. Often, it uses parallelism. By keeping the same form, readers see things in progression. (McGuigan)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Climax</rdfs:label>
@@ -1720,11 +1720,11 @@ Repetition of grammatical structures in inverted order.(Silva Rhetoricae)</rdfs:
         <esther:IsInPosition rdf:resource="https://anonymous.org/esther.owl#WholeSubsequentWithConjunction"/>
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Semantical"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#Trope"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Cold as ice&quot;</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Swim like a fish</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;he is bright like Alaska in Winter&quot;</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cold as ice</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Swim like a fish</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">He is bright like Alaska in Winter</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comparison</esther:Name>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Two things that are related are compared. It creates suggestive imagery and gives more details on objects. The key subject comes first, linked with the word “like” to the second noun. (McGuigan)</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Two things that are related are compared. It creates suggestive imagery and gives more details on objects. The key subject comes first, linked with the word "like” to the second noun. (McGuigan)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simile</rdfs:label>
         <rdfs:seeAlso xml:lang="la">Comparatio</rdfs:seeAlso>
         <rdfs:seeAlso xml:lang="en">Comparison</rdfs:seeAlso>
@@ -1739,6 +1739,7 @@ Repetition of grammatical structures in inverted order.(Silva Rhetoricae)</rdfs:
 
     <owl:NamedIndividual rdf:about="https://anonymous.org/esther.owl#Consonant">
         <rdf:type rdf:resource="https://anonymous.org/esther.owl#LinguisticElement"/>
+        <rdfs:label>Consonant</rdfs:label>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Consonant</esther:Name>
     </owl:NamedIndividual>
     
@@ -1775,7 +1776,7 @@ Repetition of grammatical structures in inverted order.(Silva Rhetoricae)</rdfs:
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Pragmatic"/>
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Semantical"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfSpeech"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;I desire not your love, but your submissive obedience.&quot; (Silva Rhetoricae)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I desire not your love, but your submissive obedience. (Silva Rhetoricae)</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Correctio</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The amending of a term or phrase just employed; or, a futher specifying of meaning, especially by indicating what something is not (which may occur either before or after the term or phrase used). A kind of redefinition, often employed as a parenthesis (an interruption) or as a climax. (Silva Rhetoricae)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Correctio</rdfs:label>
@@ -1807,9 +1808,9 @@ Repetition of grammatical structures in inverted order.(Silva Rhetoricae)</rdfs:
         <esther:IsInObject rdf:resource="https://anonymous.org/esther.owl#VerseObject"/>
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Semantical"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfSpeech"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;This is merely an oversight,&quot; he tells us. &quot;It is no crime.&quot; But I say, when an oversight takes such dimensions as these, it is indeed a crime.&quot;(Silva Rhetoricae)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is merely an oversight, he tells us. It is no crime. But I say, when an oversight takes such dimensions as these, it is indeed a crime. (Silva Rhetoricae)</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dialogismus</esther:Name>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Speaking as someone else, either to bring in others&apos; points of view into one&apos;s own speech, or to conduct a pseudo-dialog through taking up an opposing position with oneself. (Silva Rhetoricae)</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Speaking as someone else, either to bring in others' points of view into one's own speech, or to conduct a pseudo-dialog through taking up an opposing position with oneself. (Silva Rhetoricae)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dialogismus</rdfs:label>
         <rdfs:seeAlso xml:lang="de">Dialogismus</rdfs:seeAlso>
     </owl:NamedIndividual>
@@ -1841,8 +1842,8 @@ Repetition of grammatical structures in inverted order.(Silva Rhetoricae)</rdfs:
         <esther:IsOmitted rdf:resource="https://anonymous.org/esther.owl#PhraseElement"/>
         <esther:IsOmitted rdf:resource="https://anonymous.org/esther.owl#WordElement"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfConstruction"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;John forgives Mary and Mary, John.&quot;</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;The average person thinks he isn&apos;t.&quot; –Father Larry Lorenzoni</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John forgives Mary and Mary, John.</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The average person thinks he isn't. –Father Larry Lorenzoni</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ellipsis</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Omission of a word or short phrase easily understood in context. (Silva Rhetoricae)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ellipsis</rdfs:label>
@@ -1876,7 +1877,7 @@ Repetition of grammatical structures in inverted order.(Silva Rhetoricae)</rdfs:
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Semantical"/>
         <esther:IsRepeatableElementOfSameForm rdf:resource="https://anonymous.org/esther.owl#WordElement"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfSpeech"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot; Just look out, you, who look out for yourself so profitably.&quot; (Ad Herennium)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Just look out, you, who look out for yourself so profitably. (Ad Herennium)</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emphasis</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Giving prominence to a quality or trait by conceiving it as constituting the very substance in which it inheres. (Silva Rhetoricae)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emphasis</rdfs:label>
@@ -1909,9 +1910,8 @@ Repetition of grammatical structures in inverted order.(Silva Rhetoricae)</rdfs:
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Syntactic"/>
         <esther:IsReplacedByAnotherElementOfDifferentForm rdf:resource="https://anonymous.org/esther.owl#WordElement"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfSpeech"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;I consumed the triple-decker pizza&quot; (active verb)
-through enallage of mood is transformed to:
-&quot;The triple-decker pizza was consumed by me&quot; (passive verb). (Silva Rhetoricae)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I consumed the triple-decker pizza (active verb)
+through enallage of mood is transformed to:"The triple-decker pizza was consumed by me" (passive verb). (Silva Rhetoricae)</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Enallage</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The substitution of grammatically different but semantically equivalent constructions. (Silva Rhetoricae)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Enallage</rdfs:label>
@@ -1925,7 +1925,7 @@ through enallage of mood is transformed to:
 
     <owl:NamedIndividual rdf:about="https://anonymous.org/esther.owl#End">
         <rdf:type rdf:resource="https://anonymous.org/esther.owl#LinguisticPosition"/>
-        <rdfs:label>Ende</rdfs:label>
+        <rdfs:label>End</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1955,8 +1955,8 @@ through enallage of mood is transformed to:
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Pragmatic"/>
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Syntactic"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfSpeech"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;I went to the mall, the park, the river, the salon.&quot;(McGuigan)</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">There are three main reasons we should pay attention to this: first, the impact […]. Second, we have a responsibility […]; and third, […], politicians will have carte blanche to do whatever they choose.” (McGuigan)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I went to the mall, the park, the river, the salon. (McGuigan)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">There are three main reasons we should pay attention to this: first, the impact […]. Second, we have a responsibility […]; and third, […], politicians will have carte blanche to do whatever they choose. (McGuigan)</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Enumeratio</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Enumeratio supplies a list of details about something. It can be a simple list or the parts of the sentences can be connected with greater details. (McGuigan)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Enumeratio</rdfs:label>
@@ -1991,7 +1991,7 @@ through enallage of mood is transformed to:
         <esther:IsRepeatableElementOfSameForm rdf:resource="https://anonymous.org/esther.owl#PhraseElement"/>
         <esther:IsRepeatableElementOfSameForm rdf:resource="https://anonymous.org/esther.owl#WordElement"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfSpeech"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;In times like these, it is helpful to remember that there have always been times like these. &quot; —Paul Harvey</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In times like these, it is helpful to remember that there have always been times like these. —Paul Harvey</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Epanalepsis</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Repetition of the same word or clause after intervening matter. More strictly, repetition at the end of a line, phrase, or clause of the word or words that occurred at the beginning of the same line, phrase, or clause. (Silva Rhetoricae)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Epanalepsis</rdfs:label>
@@ -2064,8 +2064,8 @@ Returning to and providing additional detail for items mentioned previously (oft
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Morphological"/>
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Phonetic"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfSpeech"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">When &quot;realtor&quot; is pronounced &quot;realator&quot; (Silva Rhetoricae)</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">When &quot;sherbet&quot; is pronounced &quot;sherbert&quot; (Silva Rhetoricae)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">When "realtor" is pronounced "realator" (Silva Rhetoricae)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">When "sherbet" is pronounced "sherbert" (Silva Rhetoricae)</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Epenthesis</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The addition of a letter, sound, or syllable to the middle of a word. (Silva Rhetoricae)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Epenthesis</rdfs:label>
@@ -2101,8 +2101,8 @@ Returning to and providing additional detail for items mentioned previously (oft
         <esther:IsOppositeFigure rdf:resource="https://anonymous.org/esther.owl#Anaphora"/>
         <esther:IsRepeatableElementOfSameForm rdf:resource="https://anonymous.org/esther.owl#WordElement"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfSpeech"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;My name is Bond. James Bond.&quot; (James Bond)</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">“I am an American, he is an American, and everybody here is an American&quot;</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">My name is Bond. James Bond. (James Bond)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I am an American, he is an American, and everybody here is an American</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Epiphora</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Repetition of a word/phrase at the end of multiple sentences. (McGuigan)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Epiphora</rdfs:label>
@@ -2141,8 +2141,8 @@ Returning to and providing additional detail for items mentioned previously (oft
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Semantical"/>
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Syntactic"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfSpeech"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Loving god&quot;</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;The magnificent seven&quot; (movie title)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Loving god</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The magnificent seven (movie title)</esther:IsExample>
         <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rosy-fingered dawn; swift-footed Achilles (Silva Rhetoricae)</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Epitheton</esther:Name>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Epitheton Ornans</esther:Name>
@@ -2181,8 +2181,8 @@ Returning to and providing additional detail for items mentioned previously (oft
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Syntactic"/>
         <esther:IsRepeatableElementOfSameForm rdf:resource="https://anonymous.org/esther.owl#WordElement"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfSpeech"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;He, he it was who spelled my doom. &quot; (Silva Rhetoricae)</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;No! No! No! This can&apos;t be!&quot;</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">He, he it was who spelled my doom.  (Silva Rhetoricae)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No! No! No! This can't be!</esther:IsExample>
         <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hamlet: Words, words, words...</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Epizeuxis</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Repetition of words with no others between, for vehemence or emphasis.(Silva Rhetoricae)</rdfs:comment>
@@ -2216,7 +2216,7 @@ Returning to and providing additional detail for items mentioned previously (oft
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Semantical"/>
         <esther:IsReplacedByAnotherElementOfWeakerMeaning rdf:resource="https://anonymous.org/esther.owl#PhraseElement"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#Trope"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;To neutralizes someone instead of killing&quot;</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To neutralizes someone instead of killing</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euphemism</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Substituting a more favorable for a pejorative or socially delicate term. (Silva Rhetoricae)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euphemism</rdfs:label>
@@ -2249,7 +2249,7 @@ Returning to and providing additional detail for items mentioned previously (oft
         <esther:IsInObject rdf:resource="https://anonymous.org/esther.owl#SentenceObject"/>
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Semantical"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfThought"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Once there was a boy who lived in a village. He liked to call out “Wolf!” and laugh as the villagers ran around in a panic, only to realize that there was no wolf at all. One day, the boy was playing in the forest, and ran into an actual wolf. He cried “Wolf! Wolf!” but no one believed him anymore. Everyone thought he was lying again, and no one came to save him.</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Once there was a boy who lived in a village. He liked to call out "Wolf!" and laugh as the villagers ran around in a panic, only to realize that there was no wolf at all. One day, the boy was playing in the forest, and ran into an actual wolf. He cried "Wolf! Wolf!” but no one believed him anymore. Everyone thought he was lying again, and no one came to save him.</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exemplum</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exemplum provides an example to illustrate the point. It can strengthen your argument if the example is chosen well, in best case from a real-world example or at least plausible. (McGuigan)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exemplum</rdfs:label>
@@ -2316,9 +2316,9 @@ Returning to and providing additional detail for items mentioned previously (oft
         <esther:IsRepeatableElementOfDifferentForm rdf:resource="https://anonymous.org/esther.owl#WordElement"/>
         <esther:IsRepeatableElementOfSameForm rdf:resource="https://anonymous.org/esther.owl#WordElement"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfThought"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">“Er sei mein Freund, mein Engel, mein Gott” (Friedrich Schiller: Die Raeuber)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">He is my friend, my angel, my god. (Friedrich Schiller: Die Raeuber)</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gradatio</esther:Name>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;A Gradatio is a series whose members overlap but need not possess the same quality.&quot; (Fahnenstock). Gradatio is a progressive Anadiplosis (Lausberg)</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Gradatio is a series whose members overlap but need not possess the same quality. (Fahnenstock). Gradatio is a progressive Anadiplosis (Lausberg)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gradatio</rdfs:label>
         <rdfs:seeAlso xml:lang="sr">Gradacija</rdfs:seeAlso>
         <rdfs:seeAlso xml:lang="de">Gradation</rdfs:seeAlso>
@@ -2349,8 +2349,8 @@ Returning to and providing additional detail for items mentioned previously (oft
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Semantical"/>
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Syntactic"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#Trope"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Forever and ever&quot;</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;He came despite the rain and weather.&quot; (Silva Rhetoricae)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Forever and ever</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">He came despite the rain and weather. (Silva Rhetoricae)</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hendiadys</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Expressing a single idea by two nouns instead of a noun and its qualifier. A method of amplification that adds force. (Silva Rhetoricae)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hendiadys</rdfs:label>
@@ -2419,7 +2419,7 @@ Returning to and providing additional detail for items mentioned previously (oft
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Syntactic"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfSpeech"/>
         <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Come stay with me and dine not. (Silva Rhetoricae)</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Darksome wandering by the solitary night (instead of &quot;Solitary wandering by the darksome night&quot;) —Angel Day</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Darksome wandering by the solitary night (instead of Solitary wandering by the darksome night) —Angel Day</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hypallage</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shifting the application of words. Mixing the order of which words should correspond with which others. (Silva Rhetoricae)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hypallage</rdfs:label>
@@ -2460,7 +2460,7 @@ Returning to and providing additional detail for items mentioned previously (oft
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfSpeech"/>
         <esther:Moves rdf:resource="https://anonymous.org/esther.owl#Whole"/>
         <esther:Moves rdf:resource="https://anonymous.org/esther.owl#WordObject"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">“You have to admit is was a long year, but bearable” (McGuigan)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">You have to admit is was a long year, but bearable (McGuigan)</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hyperbaton</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hyperbaton arranges the words in a sentence in an unexpected order to make certain parts stand out. Often, and adjective is put after a noun, or the verb is at the end of a sentence. (McGuigan)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hyperbaton</rdfs:label>
@@ -2494,11 +2494,11 @@ Returning to and providing additional detail for items mentioned previously (oft
         <esther:IsInPosition rdf:resource="https://anonymous.org/esther.owl#WholeSubsequent"/>
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Semantical"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#Trope"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">“At these words, the people became so silent you could hear a beating heart from across the room.”  (McGuigan)</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">“Compared to the world during the last Ice Age, a Minnesota winter feels like spring in Hawaii.” (McGuigan)</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">“There are more reasons for NASA to fund a trip to Jupiter than there are miles in the journey.” (McGuigan)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">At these words, the people became so silent you could hear a beating heart from across the room.  (McGuigan)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Compared to the world during the last Ice Age, a Minnesota winter feels like spring in Hawaii. (McGuigan)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">There are more reasons for NASA to fund a trip to Jupiter than there are miles in the journey. (McGuigan)</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hyperbole</esther:Name>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">It consists of exaggerating some part of your statement in order to give it emphasis or focus. Hyperbole is never meant to be understood literally by the reader, and you should take great care to make sure its intent is apparent. There are few things more damaging to a writer&apos;s credibility than having hyperbole mistaken for fact, which destroys the point of the hyperbole. (McGuigan)</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">It consists of exaggerating some part of your statement in order to give it emphasis or focus. Hyperbole is never meant to be understood literally by the reader, and you should take great care to make sure its intent is apparent. There are few things more damaging to a writer's credibility than having hyperbole mistaken for fact, which destroys the point of the hyperbole. (McGuigan)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hyperbole</rdfs:label>
         <rdfs:seeAlso xml:lang="sr">Hiperbola</rdfs:seeAlso>
         <rdfs:seeAlso xml:lang="de">Hyperbel</rdfs:seeAlso>
@@ -2526,10 +2526,10 @@ Returning to and providing additional detail for items mentioned previously (oft
         <esther:IsInObject rdf:resource="https://anonymous.org/esther.owl#SentenceObject"/>
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Syntactic"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfSpeech"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Put on your shoes and socks.&quot;</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;“Her husband is dead and greets her&quot; (Goethe: Faust)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Put on your shoes and socks.</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Her husband is dead and greets her (Goethe: Faust)</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hysteron Proteron</esther:Name>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disorder of time. (What should be first, isn&apos;t.) A kind of hyperbaton. (Silva Rhetoricae)</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disorder of time. (What should be first, isn't.) A kind of hyperbaton. (Silva Rhetoricae)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hysteron Proteron</rdfs:label>
         <rdfs:seeAlso xml:lang="de">Hysteron Proteron</rdfs:seeAlso>
     </owl:NamedIndividual>
@@ -2561,9 +2561,9 @@ Returning to and providing additional detail for items mentioned previously (oft
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Semantical"/>
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Syntactic"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfSpeech"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Thus a proud man is called Lucifer, a drunkard a swine, an angry man mad.quot; </esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thus a proud man is called Lucifer, a drunkard a swine, an angry man mad. </esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Incrementum</esther:Name>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Similar to a climax: Arranging words/phrases in a sequence of increasing force. (Silva Rhetoricae)</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Similar to a climax: Arranging words/phrases in a sequence of increasing force. (Silva Rhetoricae)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Incrementum</rdfs:label>
         <rdfs:seeAlso xml:lang="de">Inkrementum</rdfs:seeAlso>
     </owl:NamedIndividual>
@@ -2594,7 +2594,7 @@ Returning to and providing additional detail for items mentioned previously (oft
         <esther:IsReplacedByElementOfOppositeMeaning rdf:resource="https://anonymous.org/esther.owl#PhraseElement"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#Trope"/>
         <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">O villain! thou wilt be condemned into everlasting redemption for this.</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Telling a quiet group, “don&apos;t speak all at once”</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Telling a quiet group, "don't speak all at once”</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Irony</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Speaking in such a way as to imply the contrary of what one says, often for the purpose of derision, mockery, or jest. (Silva Rhetoricae)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Irony</rdfs:label>
@@ -2632,8 +2632,8 @@ Returning to and providing additional detail for items mentioned previously (oft
         <esther:IsRepeatableElementOfSameForm rdf:resource="https://anonymous.org/esther.owl#PhraseElement"/>
         <esther:IsRepeatableElementOfSameForm rdf:resource="https://anonymous.org/esther.owl#SentenceElement"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfSpeech"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;In the name of the father, in the name of the son, and in the name of the holy ghost.&quot;</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Veni, vidi, vici (I came, I saw, I conquered)&quot;</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In the name of the father, in the name of the son, and in the name of the holy ghost.</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Veni, vidi, vici (I came, I saw, I conquered)</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Isocolon</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A series of similarly structured elements having the same length. A kind of parallelism. (Silva Rhetoricae)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Isocolon</rdfs:label>
@@ -2679,9 +2679,9 @@ Returning to and providing additional detail for items mentioned previously (oft
         <esther:IsReplacedByAnotherElementOfWeakerMeaning rdf:resource="https://anonymous.org/esther.owl#SentenceElement"/>
         <esther:IsReplacedByAnotherElementOfWeakerMeaning rdf:resource="https://anonymous.org/esther.owl#VerseElement"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#Trope"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;He is not the smartest tool in the shed.&quot;</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;This is not bad&quot;</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;You are not unwelcome&quot;</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">He is not the smartest tool in the shed.</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is not bad</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">You are not unwelcome</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Litotes</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Litotes uses an opposite word to emphasizes its point. Litotes is used as understatement when describing achievements, so as not to seem arrogant. Litotes is also used to weaken a claim. (McGuigan)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Litotes</rdfs:label>
@@ -2713,8 +2713,8 @@ Returning to and providing additional detail for items mentioned previously (oft
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Pragmatic"/>
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Semantical"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#Trope"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Missy&quot;</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Said of an amputated leg.: &quot;It&apos;s just a flesh wound&quot;
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missy</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Said of an amputated leg.: "It's just a flesh wound".
 —Monty Python and the Holy Grail</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meiosis</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reference to something with a name disproportionately lesser than its nature (a kind of litotes). (Silva Rhetoricae)</rdfs:comment>
@@ -2747,9 +2747,9 @@ Returning to and providing additional detail for items mentioned previously (oft
         <esther:IsInPosition rdf:resource="https://anonymous.org/esther.owl#WholeSubsequent"/>
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Semantical"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#Trope"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Flood of refugees&quot;</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Heart of gold&quot;, &quot;Heart of stone&quot;</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;His words cut deep as a knife&quot;</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flood of refugees</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Heart of gold, Heart of stone</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">His words cut deep as a knife</esther:IsExample>
         <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No man is an island —John Donne</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metaphor</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A metaphor compares two things from a different domain. It can convey literal, emotional, or psychological truths. (McGuigan)</rdfs:comment>
@@ -2782,9 +2782,9 @@ Returning to and providing additional detail for items mentioned previously (oft
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Morphological"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfSpeech"/>
         <esther:Moves rdf:resource="https://anonymous.org/esther.owl#Letter"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Elvis Lives in Evil Levis.&quot; (Silva Rhetoricae)</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;theatre&quot; becomes &quot;theater&quot;
-&quot;centre&quot; becomes &quot;center&quot;</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elvis Lives in Evil Levis. (Silva Rhetoricae)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">"theatre" becomes "theater"
+centre becomes center</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metathesis</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The transposition of letters within a word. A kind of metaplasm (and sometimes a kind of paronomasia.) (Silva Rhetoricae)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metathesis</rdfs:label>
@@ -2818,9 +2818,9 @@ Returning to and providing additional detail for items mentioned previously (oft
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Semantical"/>
         <esther:IsReplacedByAnotherElementOfSimilarMeaning rdf:resource="https://anonymous.org/esther.owl#PhraseElement"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#Trope"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;reading Goethe(Author instead book)&quot;</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;to drive a Porsche (Inventor instead of invention)&quot;</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">“The crown (instead of monarchy)” (McGuigan)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reading Goethe (Author instead book)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">to drive a Porsche (Inventor instead of invention)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The crown (instead of monarchy) (McGuigan)</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metonymy</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metonymy refers to something closely related to the actual object. If no context is available it is often difficult what is actually referred to. Closely related to synecdoche (McGuigan)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metonymy</rdfs:label>
@@ -2874,8 +2874,8 @@ Returning to and providing additional detail for items mentioned previously (oft
         <esther:IsReplacedByAnotherElementOfSameMeaning rdf:resource="https://anonymous.org/esther.owl#PhraseElement"/>
         <esther:IsReplacedByAnotherElementOfSameMeaning rdf:resource="https://anonymous.org/esther.owl#WordElement"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#Trope"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Meow, woof, oink, moo&quot;</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;The buzzing of innumerable bees&quot; (Silva Rhetoricae)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meow, woof, oink, moo</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The buzzing of innumerable bees (Silva Rhetoricae)</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Onomatopoeia</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Using or inventing a word whose sound imitates that which it names (the union of phonetics and semantics). (Silva Rhetoricae)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Onomatopoeia</rdfs:label>
@@ -2909,9 +2909,9 @@ Returning to and providing additional detail for items mentioned previously (oft
         <esther:IsInPosition rdf:resource="https://anonymous.org/esther.owl#WholeSubsequent"/>
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Semantical"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#Trope"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Little big man&quot;</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;a living death&quot;</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;heavy lightness&quot;</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Little big man</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a living death</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">heavy lightness</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oxymoron</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Placing two ordinarily opposing terms adjacent to one another. A compressed paradox. (Silva Rhetoricae)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oxymoron</rdfs:label>
@@ -2974,9 +2974,9 @@ Returning to and providing additional detail for items mentioned previously (oft
         <esther:IsInObject rdf:resource="https://anonymous.org/esther.owl#PhraseObject"/>
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Semantical"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfThought"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Less is more&quot;</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Whosoever loses his life, shall find it.&quot; (Silva Rhetoricae)</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">“I know that I don&apos;t know”</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Less is more</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Whosoever loses his life, shall find it. (Silva Rhetoricae)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I know that I don't know</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paradoxon</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A statement that is self-contradictory on the surface, yet seems to evoke a truth nonetheless. (Silva Rhetoricae)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paradoxon</rdfs:label>
@@ -3020,9 +3020,9 @@ Returning to and providing additional detail for items mentioned previously (oft
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Pragmatic"/>
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Semantical"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfSpeech"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;I do not want to talk about that ... &quot;</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;There&apos;s a lot to say about politics, but let&apos;s not!&quot;</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">We will not speak of all Queequeg&apos;s peculiarities here; how he eschewed coffee and hot rolls, and applied his undivided attention to beefsteaks, done rare. —Moby Dick &quot;Breakfast&quot;</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I do not want to talk about that ... </esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">There's a lot to say about politics, but let's not!</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">We will not speak of all Queequeg's peculiarities here; how he eschewed coffee and hot rolls, and applied his undivided attention to beefsteaks, done rare. —Moby Dick "Breakfast"</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paralipsis</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stating and drawing attention to something in the very act of pretending to pass it over. A kind of irony.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paralipsis</rdfs:label>
@@ -3089,7 +3089,7 @@ Returning to and providing additional detail for items mentioned previously (oft
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Semantical"/>
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Syntactic"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfThought"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;The governor – fool that he is – vetoed the bill even after it passed both hourses of the legislature unanimously. (McGuigan)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The governor – fool that he is – vetoed the bill even after it passed both hourses of the legislature unanimously. (McGuigan)</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parenthesis</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parenthesis inserts additional information by using either actual parentheses/dashes/commas. (McGuigan)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parenthesis</rdfs:label>
@@ -3123,9 +3123,9 @@ Returning to and providing additional detail for items mentioned previously (oft
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Syntactic"/>
         <esther:IsRepeatableElementOfDifferentKind rdf:resource="https://anonymous.org/esther.owl#WordElement"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfConstruction"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;A pun is its own reword.&quot; (Silva Rhetoricae)</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Urbi et orbi&quot; (Pope)</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;were it not here apparent that thou art heir apparent&quot; (Shakespeare: Henry IV)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pun is its own reword. (Silva Rhetoricae)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Urbi et orbi (Pope)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">were it not here apparent that thou art heir apparent (Shakespeare: Henry IV)</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paronomasia</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Using words that sound alike but that differ in meaning (punning). (Silva Rhetoricae)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paronomasia</rdfs:label>
@@ -3158,9 +3158,9 @@ Returning to and providing additional detail for items mentioned previously (oft
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Semantical"/>
         <esther:IsReplacedByAnotherElementOfSameMeaning rdf:resource="https://anonymous.org/esther.owl#PhraseElement"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#Trope"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;He&apos;s no Fabio to look at; but then, he&apos;s no Woody Allen, either.&quot; (Silva Rhetoricae)</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;mender of bad soles&quot; for shoemaker</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In the TV show &quot;Dinosaurs&quot; the infant dino called his father, &quot;Not-the-Mama.&quot; (Silva Rhetoricae)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">He's no Fabio to look at; but then, he's no Woody Allen, either. (Silva Rhetoricae)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mender of bad soles; for shoemaker</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In the TV show "Dinosaurs" the infant dino called his father, "Not-the-Mama." (Silva Rhetoricae)</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Periphrasis</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The substitution of a descriptive word or phrase for a proper name (a species of circumlocution); or, conversely, the use of a proper name as a shorthand to stand for qualities associated with it. (Silva Rhetoricae)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Periphrasis</rdfs:label>
@@ -3197,8 +3197,8 @@ Returning to and providing additional detail for items mentioned previously (oft
         <esther:IsInPosition rdf:resource="https://anonymous.org/esther.owl#Whole"/>
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Semantical"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#Trope"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;The wind whistles&quot;</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;heaven cries&quot;</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The wind whistles</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">heaven cries</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Personification</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human attributes are assigned to non-human things, e.g., animals, objects, concepts. It is easier to express abstract concepts with familiar human characteristics. Often, personification seems so natural that it is hardly recognized. (McGuigan)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Personification</rdfs:label>
@@ -3272,9 +3272,9 @@ Returning to and providing additional detail for items mentioned previously (oft
         <esther:IsInPosition rdf:resource="https://anonymous.org/esther.owl#WholeSubsequent"/>
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Syntactic"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfSpeech"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;A free gift&quot;</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;She talked with her mouth&quot; (Virgil)</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;With these very eyes I saw him do it. &quot;(Silva Rhetoricae)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A free gift</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">She talked with her mouth (Virgil)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">With these very eyes I saw him do it. (Silva Rhetoricae)</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pleonasm</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Use of more words than is necessary semantically. Rhetorical repetition that is grammatically superfluous.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pleonasm</rdfs:label>
@@ -3341,8 +3341,8 @@ Returning to and providing additional detail for items mentioned previously (oft
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Syntactic"/>
         <esther:IsRepeatableElementOfDifferentForm rdf:resource="https://anonymous.org/esther.owl#WordElement"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfConstruction"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;And singin still dost soar, and soaring ever singest&quot; (Shelley: To a Skylark)</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Which turned the rock into a standing water, the flint into a fountain of waters&quot;</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">And singin still dost soar, and soaring ever singest (Shelley: To a Skylark)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Which turned the rock into a standing water, the flint into a fountain of waters</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Polyptoton</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Repeating a word, but in a different form. Using a cognate of a given word in close proximity. (Silva Rhetoricae)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Polyptoton</rdfs:label>
@@ -3376,7 +3376,7 @@ Returning to and providing additional detail for items mentioned previously (oft
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Syntactic"/>
         <esther:IsOppositeFigure rdf:resource="https://anonymous.org/esther.owl#Asyndeton"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfConstruction"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;I wore a sweater, and a hat, and a scarf, and a pair of boots, and mittens&quot;</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I wore a sweater, and a hat, and a scarf, and a pair of boots, and mittens</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Polysyndeton</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Polysyndeton is the opposite of asyndeton, with an almost hypnotic rhythm forming quite quickly. The items are all connected by a conjunction. (McGuigan)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Polysyndeton</rdfs:label>
@@ -3456,7 +3456,7 @@ Obviously, the speaker refers less to the actuality of the moment as he does to 
         <esther:IsInObject rdf:resource="https://anonymous.org/esther.owl#SentenceObject"/>
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Semantical"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#Trope"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;The very stones of the streets speak your wickedness. The mountains clap their hands, and the hills sing for joy.&quot; (Holmes)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The very stones of the streets speak your wickedness. The mountains clap their hands, and the hills sing for joy. (Holmes)</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prosopopoeia</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Related to personification, often synonym. Prosopopoeia gives things a voice/speak for someone absent (Garret Epp).</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prosopopoeia</rdfs:label>
@@ -3532,10 +3532,10 @@ Obviously, the speaker refers less to the actuality of the moment as he does to 
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Pragmatic"/>
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Semantical"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfThought"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Are you serious?</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Who wouldn&apos;t want to be a millionaire?&quot;</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Are you serious?</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Who wouldn't want to be a millionaire?</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RhetoricalQuestion</esther:Name>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rhetorical questions imply the answer. The speaker tells the audience something they already know. Often, a rhetorical question can be answered by “yes” or “no”, but in all cases, the answer should be obvious. By letting the audience answer the question by themselves, it will strengthen and emphasize the argument. (McGuigan)</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rhetorical questions imply the answer. The speaker tells the audience something they already know. Often, a rhetorical question can be answered by "yes” or "no”, but in all cases, the answer should be obvious. By letting the audience answer the question by themselves, it will strengthen and emphasize the argument. (McGuigan)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RhetoricalQuestion</rdfs:label>
         <rdfs:seeAlso xml:lang="sr">Retorickopitanje</rdfs:seeAlso>
         <rdfs:seeAlso xml:lang="de">Rhetorische Frage</rdfs:seeAlso>
@@ -3668,9 +3668,9 @@ Obviously, the speaker refers less to the actuality of the moment as he does to 
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Syntactic"/>
         <esther:IsOmitted rdf:resource="https://anonymous.org/esther.owl#WordElement"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfConstruction"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In the following example, &quot;rend&quot; governs both objects, but the first rending is figurative; the second, literal:
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In the following example, "rend" governs both objects, but the first rending is figurative; the second, literal:
 Rend your heart, and not your garments. Joel 2:13 (Silva Rhetoricae)</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">You held your breath and the door for me
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">You held your breath and the door for me.
 —Alanis Morissette</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Syllepsis</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">When a single word that governs or modifies two or more others must be understood differently with respect to each of those words. A combination of grammatical parallelism and semantic incongruity, often with a witty or comical effect. Not to be confused with zeugma. (Silva Rhetoricae)</rdfs:comment>
@@ -3711,7 +3711,7 @@ Rend your heart, and not your garments. Joel 2:13 (Silva Rhetoricae)</esther:IsE
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfSpeech"/>
         <esther:IsUnionOf rdf:resource="https://anonymous.org/esther.owl#Anaphora"/>
         <esther:IsUnionOf rdf:resource="https://anonymous.org/esther.owl#Epiphora"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;All through industry, all for industry&quot; (Claude-Henry des Saint-Simon)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">All through industry, all for industry. (Claude-Henry des Saint-Simon)</esther:IsExample>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Combination of Anaphora and Epiphora/Epistrophe.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Symploke</rdfs:label>
         <rdfs:seeAlso xml:lang="sr">Simploha</rdfs:seeAlso>
@@ -3746,7 +3746,7 @@ Rend your heart, and not your garments. Joel 2:13 (Silva Rhetoricae)</esther:IsE
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Phonetic"/>
         <esther:IsOmitted rdf:resource="https://anonymous.org/esther.owl#Letter"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfSpeech"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">When &quot;library&quot; is pronounced &quot;libary</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">When "library" is pronounced "libary"</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Syncope</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cutting letters or syllables from the middle of a word. (Silva Rhetoricae)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Syncope</rdfs:label>
@@ -3779,8 +3779,8 @@ Rend your heart, and not your garments. Joel 2:13 (Silva Rhetoricae)</esther:IsE
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Semantical"/>
         <esther:IsReplacedByAnotherElementOfSameMeaning rdf:resource="https://anonymous.org/esther.owl#PhraseElement"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#Trope"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Austria wins the games&quot; (instead of: the austrian team)</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">“The captain shouted, ‘All hands on deck.’” (McGuigan) (hands instead of crew members)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Austria wins the games (instead of: the austrian team)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The captain shouted, ‘All hands on deck.’ (McGuigan) (hands instead of crew members)</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Synecdoche</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Synecdoche is the use of a part of something to represent the whole. (McGuigan)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Synecdoche</rdfs:label>
@@ -3813,7 +3813,7 @@ Rend your heart, and not your garments. Joel 2:13 (Silva Rhetoricae)</esther:IsE
         <esther:IsInPosition rdf:resource="https://anonymous.org/esther.owl#WholeSubsequentWithConjunction"/>
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Syntactic"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfSpeech"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Author and Writer&quot;</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Author and Writer</esther:IsExample>
         <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">You blocks, you stones, you worse than senseless things! (Silva Rhetoricae)</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Synonymia</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In general, the use of several synonyms together to amplify or explain a given subject or term. A kind of repetition that adds emotional force or intellectual clarity. Synonymia often occurs in parallel fashion. (Silva Rhetoricae)</rdfs:comment>
@@ -3891,7 +3891,7 @@ Rend your heart, and not your garments. Joel 2:13 (Silva Rhetoricae)</esther:IsE
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Syntactic"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfConstruction"/>
         <esther:Separates rdf:resource="https://anonymous.org/esther.owl#SentenceElement"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In the following sentence the word &quot;appear&quot; occurs between the two words that make up the compound &quot;hereafter.&quot;
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In the following sentence the word appear occurs between the two words that make up the compound hereafter.
 This is the place where Christ will come, as will here appear after.</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tmesis</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interjecting a word or phrase between parts of a compound word or between syllables of a word. (Silva Rhetoricae)</rdfs:comment>
@@ -3932,7 +3932,7 @@ This is the place where Christ will come, as will here appear after.</esther:IsE
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Semantical"/>
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Syntactic"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfConstruction"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Veni, vidi, vici&quot;</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Veni, vidi, vici</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tricolon</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Three parallel elements of the same length occurring together in a series. (Silva Rhetoricae)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tricolon</rdfs:label>
@@ -4097,8 +4097,8 @@ This is the place where Christ will come, as will here appear after.</esther:IsE
         <esther:IsInPosition rdf:resource="https://anonymous.org/esther.owl#WholeSubsequent"/>
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Syntactic"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfConstruction"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;A daring fellow is the jewel of the world, and a man did split his father&apos;s middle with a single clout should have the bravery of ten&quot; (J.M. Synge: The Playboy of the Western World)</esther:IsExample>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">“The man ran a hundred miles, but out of time.” (McGuigan)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A daring fellow is the jewel of the world, and a man did split his father's middle with a single clout should have the bravery of ten (J.M. Synge: The Playboy of the Western World)</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The man ran a hundred miles, but out of time. (McGuigan)</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zeugma</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zeugma Connects unexpected items in a sentence by a shared word. It adds a feeling of interconnectedness and makes something appear as cohesive and pleasing to read. (McGuigan)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zeugma</rdfs:label>
@@ -4130,7 +4130,7 @@ This is the place where Christ will come, as will here appear after.</esther:IsE
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Pragmatic"/>
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Semantical"/>
         <esther:IsRhetoricalGroup rdf:resource="https://anonymous.org/esther.owl#FigureOfSpeech"/>
-        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;You ran from a kitten? How can you call yourself a man?&quot;</esther:IsExample>
+        <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">You ran from a kitten? How can you call yourself a man?</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aphorismus</esther:Name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calling into question the proper use of a word.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aphorismus</rdfs:label>

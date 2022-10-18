@@ -28,7 +28,7 @@ class LinguisticObject(Enum):
     SAME_MEANING = "Same meaning"
     DIFFERENT_MEANING = "Different meaning"
     OPPOSED_MEANING = "Opposed meaning"
-    QM = "?"
+    # QM = "?"
 
 
 class Position(Enum):
