@@ -92,7 +92,7 @@ def user_inputter():
             break
 
     print(
-        f"...Searching for figures with {operation} of a {linguistic_element} in {linguistic_object} at the {position}...")
+        f"\n...Searching for figures with {operation} of a {linguistic_element} in {linguistic_object} at the {position}...")
     query_builder(operation, area, linguistic_element, linguistic_object, position)
 
 
@@ -109,8 +109,6 @@ def query_builder(operation, area, linguistic_element, linguistic_object, positi
         operation = "IsReplacedByAnotherElementOfSameMeaning"
     if operation == Operation.REPLACEMENT.value and linguistic_object == LinguisticObject.DIFFERENT_FORM.value:
         operation = "IsReplacedByAnotherElementOfDifferentForm"
-
-    print(operation, linguistic_object)
     if operation == Operation.REPLACEMENT.value and linguistic_object == LinguisticObject.OPPOSED_MEANING.value:
         operation = "IsReplacedByElementOfOppositeMeaning"
 
@@ -178,9 +176,8 @@ def query_builder(operation, area, linguistic_element, linguistic_object, positi
     esther_query_parts.append(closing_query)
     esther_query = "\n".join(esther_query_parts)
 
-    print(esther_query)
+    #print(esther_query)
 
-    # execute_normal_query(moon_query)
     execute_query(esther_query)
 
 
@@ -190,6 +187,27 @@ def pretty_print_text(result_list, string_name):
         result = re.sub(r'^.*?term.Literal\(', "", result)
         result = result.split(", datatype=", 1)
         print(f"{string_name}: {result[0]}")
+
+
+def get_definition_and_examples(figure_name):
+    definition = """
+                 SELECT distinct ?Figure ?Definition ?Value
+                 WHERE {
+                     ?Figure rdfs:label ?FigureName .
+                     ?Figure rdfs:comment ?Value
+                     Filter (?FigureName = '""" + figure_name + "') } """
+    definition_result = g.query(definition)
+    pretty_print_text(definition_result, "DEFINITION")
+
+    example_sentence = """
+              SELECT distinct ?Figure ?Example ?Value
+              WHERE   {
+              ?Figure   rdfs:label ?FigureName.
+              ?Figure   esther:IsExample ?Value
+              Filter(?FigureName = '""" + figure_name + "')}"""
+    example_result = g.query(example_sentence)
+    pretty_print_text(example_result, "EXAMPLE")
+    print()
 
 
 def execute_query(esther_query):
@@ -207,42 +225,11 @@ def execute_query(esther_query):
             row = re.sub(r'^.*?#', '', row)
             row = row[:-4]
             print(row)
-
-            definition = """
-               SELECT distinct ?Figure ?Definition ?Value
-               WHERE {
-                   ?Figure rdfs:label ?FigureName .
-                   ?Figure rdfs:comment ?Value
-                   Filter (?FigureName = '""" + row + "') } """
-            definition_result = g.query(definition)
-            pretty_print_text(definition_result, "DEFINITION")
-
-            example_sentence = """
-            SELECT distinct ?Figure ?Example ?Value
-            WHERE   {
-            ?Figure   rdfs:label ?FigureName.
-            ?Figure   esther:IsExample ?Value
-            Filter(?FigureName = '""" + row + "')}"""
-            example_result = g.query(example_sentence)
-            pretty_print_text(example_result, "EXAMPLE")
-            print("\n")
-
+            get_definition_and_examples(row)
     else:
         free_text_search()
-        print("No figure matches the provided properties: Try to type comma-separated keywords:")
-        keywords = input(f"Comma-separated keywords: ")
-        keywords = keywords.split(",")
-        for elem in keywords:
-            print(elem)
 
 
-# SELECT  ?title
-# WHERE
-# { ?x
-# dc: title ?title
-# FILTER
-# regex(?title, "web", "i" )
-# }
 def free_text_search():
     print("No figure matches the provided properties: Try to type comma-separated keywords:")
     keywords = input(f"Comma-separated keywords: ")
@@ -278,12 +265,20 @@ def free_text_search():
                                   reverse=True))
 
         # print top elements of sorted_dict
-        n_items = take(3, sorted_dict.items())
+        # n_items = take(3, sorted_dict.items())
 
-        # todo pretty print
-        # for key, value in n_items:
-        #    pretty_print_text()
+        for result in sorted_dict:
+            result = str(result)
+            figure_name = re.sub(r'^.*?#', '', result)
+            figure_name = figure_name.split("'), None, rdflib.term", 1)
+            figure_name = figure_name[0]
+            print(figure_name)
+            get_definition_and_examples(figure_name)
 
+            # definition_text = re.sub(r'^.*?term.Literal\(', "", result)
+            # definition_text = definition_text.split(", datatype=", 1)
+            # definition_text = definition_text[0]
+            # print(f"DEFINITION: {definition_text}")
 
     else:
         print("Sorry, no match found!")
@@ -299,10 +294,10 @@ def execute_normal_query(query):
 def main():
     # execute_normal_query(blub)
     print("Welcome to Find your Figure! Please specify the following characteristics.")
+    user_inputter()
+    # free_text_search()
 
-    free_text_search()
-
-    # user_inputter()
+    #
 
 
 if __name__ == '__main__':

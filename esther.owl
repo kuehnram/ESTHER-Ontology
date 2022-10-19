@@ -881,7 +881,7 @@ So take your time, and tell me when you will (Silva Rhetoricae)</esther:IsExampl
         <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dove with olive branch as a sign for piece</esther:IsExample>
         <esther:IsExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Justitia as women with a blindfold</esther:IsExample>
         <esther:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allegory</esther:Name>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A sustained metaphor continued through whole sentences or even through a whole discourse.(Silva Rhetoricae)</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A sustained metaphor continued through whole sentences or even through a whole discourse. (Silva Rhetoricae)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allegory</rdfs:label>
         <rdfs:seeAlso xml:lang="sr">Alegorija</rdfs:seeAlso>
         <rdfs:seeAlso xml:lang="de">Allegorie</rdfs:seeAlso>
@@ -2622,8 +2622,13 @@ Returning to and providing additional detail for items mentioned previously (oft
                 <owl:someValuesFrom rdf:resource="https://anonymous.org/esther.owl#LinguisticGroup"/>
             </owl:Restriction>
         </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://anonymous.org/esther.owl#IsRhetoricalGroup"/>
+                <owl:someValuesFrom rdf:resource="https://anonymous.org/esther.owl#RhetoricalGroup"/>
+            </owl:Restriction>
+        </rdf:type>
         <esther:Implies rdf:resource="https://anonymous.org/esther.owl#Parallelism"/>
-        <esther:Implies rdf:resource="https://anonymous.org/esther.owl#Ploke"/>
         <esther:IsInArea rdf:resource="https://anonymous.org/esther.owl#Sentence"/>
         <esther:IsInObject rdf:resource="https://anonymous.org/esther.owl#SentenceObject"/>
         <esther:IsInPosition rdf:resource="https://anonymous.org/esther.owl#Whole"/>
