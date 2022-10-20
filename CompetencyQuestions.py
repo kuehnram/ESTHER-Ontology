@@ -1,5 +1,5 @@
 __author__ = "Anonymous"
-__license__ = "CreativeCommons"
+__license__ = "MIT"
 __version__ = "1.0."
 __email__ = "a@b.c"
 

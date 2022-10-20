@@ -1,3 +1,15 @@
+__author__ = "Anonymous"
+__license__ = "MIT"
+__version__ = "1.0."
+__email__ = "a@b.c"
+
+"""This tool helps users to find the proper name of a rhetorical figure. Often, it is easy to name the properties of
+a figure, but it is hard to tell which name the figure has. With this tool, the users can specify the properties. 
+Those are then translated into a SPARQL query which is executed on the ESTHER ontology, the ontology of rhetorical 
+figure in the English Language. The name of the figure, its definition, and examples are presented to the user.
+If the search was not successful, the users have the possibility to search for key words, separated by commas.
+"""
+
 import re
 from ESTHEREnums import *
 import rdflib as rdflib
@@ -5,9 +17,7 @@ from itertools import islice
 
 g = rdflib.Graph()
 ontology = "esther"
-
-g.parse('../esther.owl',
-        format='application/rdf+xml')
+g.parse('../esther.owl', format='application/rdf+xml')
 esther = rdflib.Namespace('https://anonymous.org/')
 g.bind('esther', esther)
 
@@ -15,11 +25,12 @@ error_message = "Invalid {}. Please choose one from the list above."
 
 
 def take(n, iterable):
-    "Return first n items of the iterable as a list"
+    """Return first n items of the iterable as a list"""
     return list(islice(iterable, n))
 
 
 def build_enum_string(enum_class):
+    """Retrieve the enums from class ESTHEREnums and build strings, to present them to the user in user_inputter()"""
     enum_string = ""
     for enum in enum_class:
         enum_string += str(enum.value)
@@ -29,6 +40,7 @@ def build_enum_string(enum_class):
 
 
 def user_inputter():
+    """Ask the users for their input/properties. The suggested properties are Enums from the class ESTHEREnums"""
     operation_enum_string = build_enum_string(Operation)
     linguistic_element_enum_string = build_enum_string(LinguisticElement)
     linguistic_object_enum_string = build_enum_string(LinguisticObject)
@@ -40,8 +52,6 @@ def user_inputter():
             print(error_message.format("operation"))
             continue
         else:
-            # if operation == Operation.QM.value:
-            #     operation = "_"
             break
 
     while True:
@@ -51,9 +61,6 @@ def user_inputter():
             print(error_message.format("linguistic element)"))
             continue
         else:
-            # if linguistic_element == LinguisticElement.QM.value:
-            #     linguistic_element = "_"
-            # else:
             if linguistic_element != LinguisticElement.LETTER.value and linguistic_element != LinguisticElement.CONSONANT.value and linguistic_element != LinguisticElement.QM.value:
                 linguistic_element += "Element"
             break
@@ -64,8 +71,6 @@ def user_inputter():
             print(error_message.format("area"))
             continue
         else:
-            # if area == LinguisticElement.QM.value:
-            #     area = "_"
             break
 
     while True:
@@ -75,8 +80,6 @@ def user_inputter():
             print(error_message.format("linguistic object"))
             continue
         else:
-            # if linguistic_object == LinguisticObject.QM.value:
-            #     linguistic_object = "_"
             break
     while True:
         position = input(f"Position: {operation} at the ({position_enum_string}): ").capitalize().strip()
@@ -84,8 +87,6 @@ def user_inputter():
             print(error_message.format("position"))
             continue
         else:
-            # if position == Position.QM.value:
-            #     position = "_"
             if position == Position.BEGINNING_AND_END.value:
                 position = "BeginningAndEnd"
             break
@@ -96,7 +97,8 @@ def user_inputter():
 
 
 def query_builder(operation, area, linguistic_element, linguistic_object, position):
-    # https://stackoverflow.com/questions/53492632/how-to-use-python-variables-inside-a-sparql-ontology-query
+    """Build a query with the specified properties. Properties are only appended if they are known.
+    Combinations of operations and linguistic objects yield certain operations."""
 
     if operation == Operation.REPETITION.value and linguistic_object == LinguisticObject.SAME_FORM.value:
         operation = "IsRepeatableElementOfSameForm"
@@ -122,17 +124,8 @@ def query_builder(operation, area, linguistic_element, linguistic_object, positi
     statement_operation_name = "?LinguisticElement rdfs:label ?LingElementName ."
     filter = "FILTER ("
     and_bool = " && "
-    # if area == "_":
-    #     filter_area = "?AreaName = _"
-    # else:
     filter_area = "?AreaName ='" + area + "' "
-    # if position == "_":
-    #     filter_position = "?PositionName = _"
-    # else:
     filter_position = "?PositionName = '" + position + "'"
-    # if linguistic_element == "_":
-    #     filter_ling_elem = "?LingElementName = _"
-    # else:
     filter_ling_elem = "?LingElementName = '" + linguistic_element + "'"
     closing_filter = ")"
     closing_query = "}"
@@ -154,8 +147,6 @@ def query_builder(operation, area, linguistic_element, linguistic_object, positi
     if operation != Operation.QM.value:
         esther_query_parts.append(statement_operation)
         esther_query_parts.append(statement_operation_name)
-    # else:
-    #     esther_query_parts.append(statement_operation)
 
     if area != LinguisticElement.QM.value or position != Position.QM.value or operation != Operation.QM.value:
         esther_query_parts.append(filter)
@@ -182,12 +173,12 @@ def query_builder(operation, area, linguistic_element, linguistic_object, positi
         WHERE {?Figure esther:IsInArea ?Area . 
         }
         """
-
-    print(esther_query)
+    # print(esther_query)
     execute_query(esther_query)
 
 
 def pretty_print_text(result_list, string_name):
+    """Cut off irrelevant information and show only definitions or examples"""
     for result in result_list:
         result = str(result)
         result = re.sub(r'^.*?term.Literal\(', "", result)
@@ -196,6 +187,7 @@ def pretty_print_text(result_list, string_name):
 
 
 def get_definition_and_examples(figure_name):
+    """Retrieve definition and examples for a given figure name"""
     definition = """
             SELECT distinct ?Figure ?Definition ?Value
                  WHERE {
@@ -213,10 +205,12 @@ def get_definition_and_examples(figure_name):
               Filter(?FigureName = '""" + str(figure_name) + "')}"""
     example_result = g.query(example_sentence)
     pretty_print_text(example_result, "EXAMPLE")
-    print()
+    print()  # new line looks better
 
 
 def execute_query(esther_query):
+    """Executes a query and prints the figure name, definitions, and examples nicely. If no matching figure was found,
+    the users have the possibility to search for free text"""
     result = g.query(esther_query)
     result_length = len(result)
     if result_length > 0:
@@ -233,18 +227,17 @@ def execute_query(esther_query):
 
 
 def free_text_search():
+    """If no figure matches, users can search for commaseparated keywords that might appear in the definition.
+    The results are then sorted descending according to the number of appearances of the keywords"""
     print("No figure matches the provided properties: Try to type comma-separated keywords:")
     keywords = input(f"Comma-separated keywords: ")
     keywords = keywords.split(",")
     keywords = [elem.strip() for elem in keywords]
 
     get_all_figure_definitions = """
-    SELECT
-    distinct ?Figure ?Definition ?Value
-    WHERE
-    {
-    ?Figure
-    rdfs: comment ?Value.} """
+    SELECT DISTINCT ?Figure ?Definition ?Value
+    WHERE {
+    ?Figure rdfs:comment ?Value.} """
     all_figure_definitions = g.query(get_all_figure_definitions)
 
     possible_candidates_dict = {}  # Dict[str, int] = Dict[definition is key, number of occurence of the keywords]
@@ -265,49 +258,30 @@ def free_text_search():
     # Comment out to print only three top elements of sorted_dict
     # n_items = take(3, sorted_dict.items())
 
-    for result in sorted_dict:
-        result = str(result)
-        figure_name = re.sub(r'^.*?#', '', result)
-        figure_name = figure_name.split("'), None, rdflib.term", 1)
-        figure_name = figure_name[0]
-        print(figure_name)
-        get_definition_and_examples(figure_name)
+        for result in sorted_dict:
+            result = str(result)
+            figure_name = re.sub(r'^.*?#', '', result)
+            figure_name = figure_name.split("'), None, rdflib.term", 1)
+            figure_name = figure_name[0]
+            print(figure_name)
+            get_definition_and_examples(figure_name)
     else:
         print("Sorry, no match found!")
 
 
 def execute_normal_query(query):
+    """Execute a query without any output styling or examples or definitions"""
     result = g.query(query)
     print(len(result))
     for row in result:
-        row = str(row)
-        row = re.sub(r'^.*?#', '', row)
-        row = row[:-4]
         print(row)
-        get_definition_and_examples(row)
+
 
 def main():
     print("Welcome to Find your Figure! Please specify the following characteristics.")
-    user_inputter()
-    # free_text_search()
-
-    blub = """
-SELECT DISTINCT ?Figure
-WHERE { 
-?Figure esther:IsInPosition ?Position . 
-?Position rdfs:label ?PositionName .
-?Figure esther:Repetition ?LinguisticElement .
-?LinguisticElement rdfs:label ?LingElementName .
-FILTER (
-?PositionName = 'Beginning'
- && 
-?LingElementName = 'WordElement'
-)
-}
-    
-    """
-    # execute_normal_query(blub)
-
+    # user_inputter()
+    # Comment the line below out and the one above in if you want to go directly to the free text search
+    free_text_search()
 
 
 if __name__ == '__main__':
