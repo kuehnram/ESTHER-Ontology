@@ -40,19 +40,8 @@ def user_inputter():
             print(error_message.format("operation"))
             continue
         else:
-            if operation == Operation.QM.value:
-                operation = "_"
-            break
-
-    # Area and Linguistic Elements are the same, except for the Element at the end of the thing
-    while True:
-        area = input(f"In which area does {operation} occur ({linguistic_element_enum_string}): ").capitalize().strip()
-        if area not in [member.value for member in LinguisticElement]:
-            print(error_message.format("area"))
-            continue
-        else:
-            if area == LinguisticElement.QM.value:
-                area = "_"
+            # if operation == Operation.QM.value:
+            #     operation = "_"
             break
 
     while True:
@@ -62,11 +51,21 @@ def user_inputter():
             print(error_message.format("linguistic element)"))
             continue
         else:
-            if linguistic_element == LinguisticElement.QM.value:
-                linguistic_element = "_"
-            else:
-                if linguistic_element != LinguisticElement.LETTER.value and linguistic_element != LinguisticElement.CONSONANT.value:
-                    linguistic_element += "Element"
+            # if linguistic_element == LinguisticElement.QM.value:
+            #     linguistic_element = "_"
+            # else:
+            if linguistic_element != LinguisticElement.LETTER.value and linguistic_element != LinguisticElement.CONSONANT.value and linguistic_element != LinguisticElement.QM.value:
+                linguistic_element += "Element"
+            break
+
+    while True:
+        area = input(f"In which area does {operation} occur ({linguistic_element_enum_string}): ").capitalize().strip()
+        if area not in [member.value for member in LinguisticElement]:
+            print(error_message.format("area"))
+            continue
+        else:
+            # if area == LinguisticElement.QM.value:
+            #     area = "_"
             break
 
     while True:
@@ -85,8 +84,8 @@ def user_inputter():
             print(error_message.format("position"))
             continue
         else:
-            if position == Position.QM.value:
-                position = "_"
+            # if position == Position.QM.value:
+            #     position = "_"
             if position == Position.BEGINNING_AND_END.value:
                 position = "BeginningAndEnd"
             break
@@ -117,7 +116,7 @@ def query_builder(operation, area, linguistic_element, linguistic_object, positi
     where = "WHERE {"
     statement_area = "?Figure esther:IsInArea ?Area . "
     statement_area_name = "?Area rdfs:label ?AreaName ."
-    statement_position = "?Figure esther:IsInPosition ?Position. "
+    statement_position = "?Figure esther:IsInPosition ?Position . "
     statement_position_name = "?Position rdfs:label ?PositionName ."
     statement_operation = "?Figure esther:" + operation + " ?LinguisticElement ."
     statement_operation_name = "?LinguisticElement rdfs:label ?LingElementName ."
@@ -140,44 +139,51 @@ def query_builder(operation, area, linguistic_element, linguistic_object, positi
 
     esther_query_parts.append(select)
     esther_query_parts.append(where)
-    if area != "_":
+    if area != LinguisticElement.QM.value:
         esther_query_parts.append(statement_area)
         esther_query_parts.append(statement_area_name)
     else:
         esther_query_parts.append(statement_area)
 
-    if position != "_":
+    if position != Position.QM.value:
         esther_query_parts.append(statement_position)
         esther_query_parts.append(statement_position_name)
     else:
         esther_query_parts.append(statement_position)
 
-    if operation != "_":
+    if operation != Operation.QM.value:
         esther_query_parts.append(statement_operation)
         esther_query_parts.append(statement_operation_name)
     # else:
     #     esther_query_parts.append(statement_operation)
 
-    if area != "_" or position != "_" or operation != "_":
+    if area != LinguisticElement.QM.value or position != Position.QM.value or operation != Operation.QM.value:
         esther_query_parts.append(filter)
-    if area != "_":
+    if area != LinguisticElement.QM.value:
         esther_query_parts.append(filter_area)
 
-    if position != "_":
-        esther_query_parts.append(and_bool)
+    if position != Position.QM.value:
+        if area != LinguisticElement.QM.value:
+            esther_query_parts.append(and_bool)
         esther_query_parts.append(filter_position)
 
-    if linguistic_element != "_":
-        esther_query_parts.append(and_bool)
+    if linguistic_element != LinguisticElement.QM.value:
+        if area != LinguisticElement.QM.value or position != Position.QM.value:
+            esther_query_parts.append(and_bool)
         esther_query_parts.append(filter_ling_elem)
 
-    if area != "_" or position != "_" or operation != "_":
+    if area != LinguisticElement.QM.value or position != Position.QM.value or operation != Operation.QM.value:
         esther_query_parts.append(closing_filter)
     esther_query_parts.append(closing_query)
     esther_query = "\n".join(esther_query_parts)
 
-    #print(esther_query)
+    if area == LinguisticElement.QM.value and position == Position.QM.value and operation == Operation.QM.value and linguistic_element == LinguisticElement.QM.value and linguistic_object == LinguisticObject.QM.value:
+        esther_query = """ SELECT DISTINCT ?Figure
+        WHERE {?Figure esther:IsInArea ?Area . 
+        }
+        """
 
+    print(esther_query)
     execute_query(esther_query)
 
 
@@ -191,7 +197,7 @@ def pretty_print_text(result_list, string_name):
 
 def get_definition_and_examples(figure_name):
     definition = """
-                 SELECT distinct ?Figure ?Definition ?Value
+            SELECT distinct ?Figure ?Definition ?Value
                  WHERE {
                      ?Figure rdfs:label ?FigureName .
                      ?Figure rdfs:comment ?Value
@@ -200,11 +206,11 @@ def get_definition_and_examples(figure_name):
     pretty_print_text(definition_result, "DEFINITION")
 
     example_sentence = """
-              SELECT distinct ?Figure ?Example ?Value
+            SELECT distinct ?Figure ?Example ?Value
               WHERE   {
               ?Figure   rdfs:label ?FigureName.
               ?Figure   esther:IsExample ?Value
-              Filter(?FigureName = '""" + figure_name + "')}"""
+              Filter(?FigureName = '""" + str(figure_name) + "')}"""
     example_result = g.query(example_sentence)
     pretty_print_text(example_result, "EXAMPLE")
     print()
@@ -212,10 +218,6 @@ def get_definition_and_examples(figure_name):
 
 def execute_query(esther_query):
     result = g.query(esther_query)
-    # print(result.serialize(format='csv'))
-    # print(RDFS['label'])
-    # print(OWL.title)
-    # print(RDFS.uri)
     result_length = len(result)
     if result_length > 0:
         print(f"Following {result_length} figures fit your description:")
@@ -237,17 +239,13 @@ def free_text_search():
     keywords = [elem.strip() for elem in keywords]
 
     get_all_figure_definitions = """
-               SELECT distinct ?Figure ?Definition ?Value
-               WHERE {
-                   ?Figure rdfs:comment ?Value . } """
+    SELECT
+    distinct ?Figure ?Definition ?Value
+    WHERE
+    {
+    ?Figure
+    rdfs: comment ?Value.} """
     all_figure_definitions = g.query(get_all_figure_definitions)
-
-    # blub = """ SELECT  ?title
-    # WHERE    { ?x   rdfs:comment ?title
-    # FILTER
-    # regex(?title, "interconnectedness", "cohesive"  )
-    # }
-    # """
 
     possible_candidates_dict = {}  # Dict[str, int] = Dict[definition is key, number of occurence of the keywords]
     for definition in all_figure_definitions:
@@ -264,22 +262,16 @@ def free_text_search():
                                   key=lambda item: item[1],
                                   reverse=True))
 
-        # print top elements of sorted_dict
-        # n_items = take(3, sorted_dict.items())
+    # Comment out to print only three top elements of sorted_dict
+    # n_items = take(3, sorted_dict.items())
 
-        for result in sorted_dict:
-            result = str(result)
-            figure_name = re.sub(r'^.*?#', '', result)
-            figure_name = figure_name.split("'), None, rdflib.term", 1)
-            figure_name = figure_name[0]
-            print(figure_name)
-            get_definition_and_examples(figure_name)
-
-            # definition_text = re.sub(r'^.*?term.Literal\(', "", result)
-            # definition_text = definition_text.split(", datatype=", 1)
-            # definition_text = definition_text[0]
-            # print(f"DEFINITION: {definition_text}")
-
+    for result in sorted_dict:
+        result = str(result)
+        figure_name = re.sub(r'^.*?#', '', result)
+        figure_name = figure_name.split("'), None, rdflib.term", 1)
+        figure_name = figure_name[0]
+        print(figure_name)
+        get_definition_and_examples(figure_name)
     else:
         print("Sorry, no match found!")
 
@@ -288,16 +280,34 @@ def execute_normal_query(query):
     result = g.query(query)
     print(len(result))
     for row in result:
+        row = str(row)
+        row = re.sub(r'^.*?#', '', row)
+        row = row[:-4]
         print(row)
-
+        get_definition_and_examples(row)
 
 def main():
-    # execute_normal_query(blub)
     print("Welcome to Find your Figure! Please specify the following characteristics.")
-    #user_inputter()
-    free_text_search()
+    user_inputter()
+    # free_text_search()
 
-    #
+    blub = """
+SELECT DISTINCT ?Figure
+WHERE { 
+?Figure esther:IsInPosition ?Position . 
+?Position rdfs:label ?PositionName .
+?Figure esther:Repetition ?LinguisticElement .
+?LinguisticElement rdfs:label ?LingElementName .
+FILTER (
+?PositionName = 'Beginning'
+ && 
+?LingElementName = 'WordElement'
+)
+}
+    
+    """
+    # execute_normal_query(blub)
+
 
 
 if __name__ == '__main__':

@@ -4112,7 +4112,7 @@ Rend your heart, and not your garments. Joel 2:13 (Silva Rhetoricae)</esther:IsE
     
 
 
-    <!-- https://anonymous.org/esther.owl#??EinteilungStimmtNichtAphorismus -->
+    <!-- https://anonymous.org/esther.owl#??EinteilungStimmtNichtAphorismus
 
     <owl:NamedIndividual rdf:about="https://anonymous.org/esther.owl#??EinteilungStimmtNichtAphorismus">
         <rdf:type rdf:resource="https://anonymous.org/esther.owl#RhetoricalFigure"/>
@@ -4141,7 +4141,7 @@ Rend your heart, and not your garments. Joel 2:13 (Silva Rhetoricae)</esther:IsE
         <rdfs:seeAlso xml:lang="de">Aphorismus</rdfs:seeAlso>
     </owl:NamedIndividual>
     
-
+-->
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
