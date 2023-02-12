@@ -1,6 +1,10 @@
 # ESTHER-Ontology
 
-Ontology for rhetorical figures in English
+Ontology for rhetorical figures in English: esther.owl contains the formal domain ontology, describing rhetorical figures 
+in the English language.
+The 10 competency questions written in SPARQL in Python are in the file CompetencyQuestions.py
+The tool that supports people in the annotation process is in the folder FyF. The installation guide is below.
+
 
 ## Installation
 
