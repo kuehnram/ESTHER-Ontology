@@ -32,10 +32,11 @@ def take(n, iterable):
 def build_enum_string(enum_class):
     """Retrieve the enums from class ESTHEREnums and build strings, to present them to the user in user_inputter()"""
     enum_string = ""
-    for enum in enum_class:
-        enum_string += str(enum.value)
-        enum_string += str(", ")
-    enum_string = enum_string[:-2]  # remove last comma
+    enum: Enum
+    for i, enum in enumerate(enum_class, start=0):
+
+        enum_string += f"{i}: {enum.value}\n"
+    enum_string = enum_string.strip()
     return enum_string
 
 
@@ -47,52 +48,101 @@ def user_inputter():
     position_enum_string = build_enum_string(Position)
 
     while True:
-        operation = input(f"Operation ({operation_enum_string}): ").capitalize().strip()
-        if operation not in [member.value for member in Operation]:
-            print(error_message.format("operation"))
+        try:
+            operation_id = int(input(f"Which Operation takes place?\n"
+                                     f"{operation_enum_string}\n"
+                                     f"Your choice: ").strip())
+            operations = [member.value for member in Operation]
+            if operation_id not in range(len(Operation)):
+                print(error_message.format("operation"))
+                continue
+            else:
+                operation = operations[operation_id]
+                print(f"Selected: {operation}")
+                break
+        except ValueError:
             continue
-        else:
-            break
+    print()
 
     while True:
-        linguistic_element = input(
-            f"Linguistic Element: {operation} of ({linguistic_element_enum_string}): ").capitalize().strip()
-        if linguistic_element not in [member.value for member in LinguisticElement]:
-            print(error_message.format("linguistic element)"))
+        try:
+            # noinspection PyUnboundLocalVariable
+            linguistic_element_id = int(input(f"Which linguistic element is affected? {operation} of:\n"
+                                              f"{linguistic_element_enum_string}\n"
+                                              f"Your choice: ").strip())
+            linguistic_elements = [member.value for member in LinguisticElement]
+            if linguistic_element_id not in range(len(linguistic_elements)):
+                print(error_message.format("linguistic element"))
+                continue
+            else:
+                linguistic_element = linguistic_elements[linguistic_element_id]
+                print(f"Selected: {linguistic_element}")
+                if linguistic_element not in [LinguisticElement.LETTER.value,
+                                              LinguisticElement.CONSONANT.value,
+                                              LinguisticElement.QM.value]:
+                    linguistic_element += "Element"
+                break
+        except ValueError:
             continue
-        else:
-            if linguistic_element != LinguisticElement.LETTER.value and linguistic_element != LinguisticElement.CONSONANT.value and linguistic_element != LinguisticElement.QM.value:
-                linguistic_element += "Element"
-            break
+    print()
 
     while True:
-        area = input(f"In which area does {operation} occur ({linguistic_element_enum_string}): ").capitalize().strip()
-        if area not in [member.value for member in LinguisticElement]:
-            print(error_message.format("area"))
+        try:
+            area_id = int(input(f"In which area does {operation} occur:\n"
+                                f"{linguistic_element_enum_string}\n"
+                                f"Your choice: ").strip())
+            areas = [member.value for member in LinguisticElement]
+            if area_id not in range(len(areas)):
+                print(error_message.format("area"))
+                continue
+            else:
+                area = areas[area_id]
+                print(f"Selected: {area}")
+                break
+        except ValueError:
             continue
-        else:
-            break
+    print()
 
     while True:
-        linguistic_object = input(
-            f"Linguistic Object: {operation} of ({linguistic_object_enum_string}): ").capitalize().strip()
-        if linguistic_object not in [member.value for member in LinguisticObject]:
-            print(error_message.format("linguistic object"))
+        try:
+            linguistic_object_id = int(input(f"Linguistic Object: {operation} of\n"
+                                             f"{linguistic_object_enum_string}\n"
+                                             f"Your choice: ").strip())
+            linguistic_objects = [member.value for member in LinguisticObject]
+            if linguistic_object_id not in range(len(linguistic_objects)):
+                print(error_message.format("linguistic object"))
+                continue
+            else:
+                linguistic_object = linguistic_objects[linguistic_object_id]
+                print(f"Selected: {linguistic_object}")
+                break
+        except ValueError:
             continue
-        else:
-            break
-    while True:
-        position = input(f"Position: {operation} at the ({position_enum_string}): ").capitalize().strip()
-        if position not in [member.value for member in Position]:
-            print(error_message.format("position"))
-            continue
-        else:
-            if position == Position.BEGINNING_AND_END.value:
-                position = "BeginningAndEnd"
-            break
+    print()
 
+    while True:
+        try:
+            position_id = int(input(f"Position: {operation} at the\n"
+                                    f"{position_enum_string}\n"
+                                    f"Your choice: ").strip())
+            positions = [member.value for member in Position]
+            if position_id not in range(len(positions)):
+                print(error_message.format("position"))
+                continue
+            else:
+                position = positions[position_id]
+                if position == Position.BEGINNING_AND_END.value:
+                    position = "BeginningAndEnd"
+                print(f"Selected: {position}")
+                break
+        except ValueError:
+            continue
+
+    # Variables are bound otherwise while True would not have exited -> we can ignore the Inspection
+    # noinspection PyUnboundLocalVariable
     print(
         f"\n...Searching for figures with {operation} of a {linguistic_element} in {linguistic_object} at the {position}...")
+    # noinspection PyUnboundLocalVariable
     query_builder(operation, area, linguistic_element, linguistic_object, position)
 
 
@@ -240,7 +290,7 @@ def free_text_search():
     ?Figure rdfs:comment ?Value.} """
     all_figure_definitions = g.query(get_all_figure_definitions)
 
-    possible_candidates_dict = {}  # Dict[str, int] = Dict[definition is key, number of occurence of the keywords]
+    possible_candidates_dict = {}  # Dict[str, int] = Dict[definition is key, number of occurrence of the keywords]
     for definition in all_figure_definitions:
         for keyword in keywords:
             if str(keyword).lower() in str(definition).lower():
@@ -255,8 +305,8 @@ def free_text_search():
                                   key=lambda item: item[1],
                                   reverse=True))
 
-    # Comment out to print only three top elements of sorted_dict
-    # n_items = take(3, sorted_dict.items())
+        # Comment out to print only three top elements of sorted_dict
+        # n_items = take(3, sorted_dict.items())
 
         for result in sorted_dict:
             result = str(result)
@@ -279,9 +329,7 @@ def execute_normal_query(query):
 
 def main():
     print("Welcome to Find your Figure! Please specify the following characteristics.")
-    # user_inputter()
-    # Comment the line below out and the one above in if you want to go directly to the free text search
-    free_text_search()
+    user_inputter()
 
 
 if __name__ == '__main__':

@@ -1481,7 +1481,6 @@ Anastrophe is most often a synonym for hyperbaton, but is occasionally referred 
                 <owl:someValuesFrom rdf:resource="https://anonymous.org/esther.owl#RhetoricalGroup"/>
             </owl:Restriction>
         </rdf:type>
-        <esther:Implies rdf:resource="https://anonymous.org/esther.owl#Ploke"/>
         <esther:IsInArea rdf:resource="https://anonymous.org/esther.owl#Sentence"/>
         <esther:IsInArea rdf:resource="https://anonymous.org/esther.owl#Verse"/>
         <esther:IsInObject rdf:resource="https://anonymous.org/esther.owl#VerseObject"/>
@@ -2375,7 +2374,6 @@ Returning to and providing additional detail for items mentioned previously (oft
                 <owl:someValuesFrom rdf:resource="https://anonymous.org/esther.owl#RhetoricalGroup"/>
             </owl:Restriction>
         </rdf:type>
-        <esther:Implies rdf:resource="https://anonymous.org/esther.owl#Ploke"/>
         <esther:IsInArea rdf:resource="https://anonymous.org/esther.owl#Verse"/>
         <esther:IsInObject rdf:resource="https://anonymous.org/esther.owl#WordObject"/>
         <esther:IsInPosition rdf:resource="https://anonymous.org/esther.owl#End"/>
@@ -3708,6 +3706,7 @@ Rend your heart, and not your garments. Joel 2:13 (Silva Rhetoricae)</esther:IsE
         <esther:IsInArea rdf:resource="https://anonymous.org/esther.owl#Sentence"/>
         <esther:IsInArea rdf:resource="https://anonymous.org/esther.owl#Verse"/>
         <esther:IsInObject rdf:resource="https://anonymous.org/esther.owl#WordObject"/>
+        <esther:IsInPosition rdf:resource="https://anonymous.org/esther.owl#BeginningAndEnd"/>
         <esther:IsInPosition rdf:resource="https://anonymous.org/esther.owl#Beginning"/>
         <esther:IsInPosition rdf:resource="https://anonymous.org/esther.owl#End"/>
         <esther:IsLinguisticGroup rdf:resource="https://anonymous.org/esther.owl#Morphological"/>
