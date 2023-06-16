@@ -11,12 +11,10 @@
     <owl:Ontology rdf:about="https://kuehnram.de/esther">
         <owl:versionIRI rdf:resource="https://kuehnram.de/esther"/>
         <terms:abstract xml:lang="en">Ontology of rhetorical figures in the English language. It shall enable computational detection/generation and help human annotators identifying names of rhetorical figures in text.</terms:abstract>
-        <terms:contributor>Ramona Kühn</terms:contributor>
+        <terms:creator>Ramona Kühn</terms:creator>
         <terms:creator>Jelena Mitrović</terms:creator>
         <terms:creator>Michael Granitzer</terms:creator>
-        <terms:creator>Ramona Kühn</terms:creator>
         <terms:license>https://creativecommons.org/licenses/by/4.0/legalcode</terms:license>
-        <terms:publisher>Anonymous</terms:publisher>
         <terms:title xml:lang="en">Esther</terms:title>
         <rdfs:comment xml:lang="en">Contacts:
         email: ramona.kuehn@uni-passau.de</rdfs:comment>
