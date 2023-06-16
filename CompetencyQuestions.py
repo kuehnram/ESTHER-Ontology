@@ -1,7 +1,7 @@
-__author__ = "Anonymous"
+__author__ = "Ramona Kühn"
 __license__ = "MIT"
 __version__ = "1.0."
-__email__ = "a@b.c"
+__email__ = "ramona.kuehn@uni-passau.de"
 
 """
 This file contains the competency questions (Grüninger and Fox 1995) to evaluate the Esther ontology of rhetorical
@@ -23,9 +23,10 @@ Q10: Which figures are the opposite of other figures?
 import rdflib
 
 g = rdflib.Graph()
-g.parse('esther.owl', format='application/rdf+xml')
-esther = rdflib.Namespace('https://anonymous.org/')
+g.parse('C:/Users/kuehn21/Documents/Paper/2023 - FOIS_ESTHER EnglishOntology/esther - Kopie.owl', format='application/rdf+xml')
+esther = rdflib.Namespace('https://kuehnram.de/')
 g.bind('esther', esther)
+
 
 # Q1: Which rhetorical figures have their defining element in a word?
 cq1 = """

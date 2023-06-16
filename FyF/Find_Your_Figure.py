@@ -18,7 +18,7 @@ from itertools import islice
 g = rdflib.Graph()
 ontology = "esther"
 g.parse('../esther.owl', format='application/rdf+xml')
-esther = rdflib.Namespace('https://anonymous.org/')
+esther = rdflib.Namespace('https://kuehnram.de/')
 g.bind('esther', esther)
 
 error_message = "Invalid {}. Please choose one from the list above."
@@ -151,24 +151,24 @@ def query_builder(operation, area, linguistic_element, linguistic_object, positi
     Combinations of operations and linguistic objects yield certain operations."""
 
     if operation == Operation.REPETITION.value and linguistic_object == LinguisticObject.SAME_FORM.value:
-        operation = "IsRepeatableElementOfSameForm"
+        operation = "isRepeatableElementOfSameForm"
     if operation == Operation.REPETITION.value and linguistic_object == LinguisticObject.DIFFERENT_FORM.value:
-        operation = "IsRepeatableElementOfDifferentForm"
+        operation = "isRepeatableElementOfDifferentForm"
     if operation == Operation.OMISSION.value:
-        operation = "IsOmitted"
+        operation = "isOmitted"
     if operation == Operation.REPLACEMENT.value and linguistic_object == LinguisticObject.SAME_MEANING.value:
-        operation = "IsReplacedByAnotherElementOfSameMeaning"
+        operation = "isReplacedByAnotherElementOfSameMeaning"
     if operation == Operation.REPLACEMENT.value and linguistic_object == LinguisticObject.DIFFERENT_FORM.value:
-        operation = "IsReplacedByAnotherElementOfDifferentForm"
+        operation = "isReplacedByAnotherElementOfDifferentForm"
     if operation == Operation.REPLACEMENT.value and linguistic_object == LinguisticObject.OPPOSED_MEANING.value:
-        operation = "IsReplacedByElementOfOppositeMeaning"
+        operation = "isReplacedByElementOfOppositeMeaning"
 
     esther_query_parts = []
     select = "SELECT DISTINCT ?Figure"
     where = "WHERE {"
-    statement_area = "?Figure esther:IsInArea ?Area . "
+    statement_area = "?Figure esther:isInArea ?Area . "
     statement_area_name = "?Area rdfs:label ?AreaName ."
-    statement_position = "?Figure esther:IsInPosition ?Position . "
+    statement_position = "?Figure esther:isInPosition ?Position . "
     statement_position_name = "?Position rdfs:label ?PositionName ."
     statement_operation = "?Figure esther:" + operation + " ?LinguisticElement ."
     statement_operation_name = "?LinguisticElement rdfs:label ?LingElementName ."
@@ -220,7 +220,7 @@ def query_builder(operation, area, linguistic_element, linguistic_object, positi
 
     if area == LinguisticElement.QM.value and position == Position.QM.value and operation == Operation.QM.value and linguistic_element == LinguisticElement.QM.value and linguistic_object == LinguisticObject.QM.value:
         esther_query = """ SELECT DISTINCT ?Figure
-        WHERE {?Figure esther:IsInArea ?Area . 
+        WHERE {?Figure esther:isInArea ?Area . 
         }
         """
     # print(esther_query)
@@ -251,7 +251,7 @@ def get_definition_and_examples(figure_name):
             SELECT distinct ?Figure ?Example ?Value
               WHERE   {
               ?Figure   rdfs:label ?FigureName.
-              ?Figure   esther:IsExample ?Value
+              ?Figure   esther:isExample ?Value
               Filter(?FigureName = '""" + str(figure_name) + "')}"""
     example_result = g.query(example_sentence)
     pretty_print_text(example_result, "EXAMPLE")
