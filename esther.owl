@@ -4099,9 +4099,9 @@ This is the place where Christ will come, as will here appear after.</esther:isE
         <esther:isLinguisticGroup rdf:resource="https://kuehnram.de/esther.owl#Syntactic"/>
         <esther:isRhetoricalGroup rdf:resource="https://kuehnram.de/esther.owl#FigureOfConstruction"/>
         <esther:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zeugma</esther:hasName>
-        <esther:isExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;A daring fellow is the jewel of the world, and a man did split his father&apos;s middle with a single clout should have the bravery of ten&quot; (J.M. Synge: The Playboy of the Western World)</esther:isExample>
-        <esther:isExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;The man ran a hundred miles, but out of time.” (McGuigan)</esther:isExample>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zeugma Connects unexpected items in a sentence by a shared word. It adds a feeling of interconnectedness and makes something appear as cohesive and pleasing to read. (McGuigan)</rdfs:comment>
+        <esther:isExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">"A daring fellow is the jewel of the world, and a man did split his father's middle with a single clout should have the bravery of ten" (J.M. Synge: The Playboy of the Western World)</esther:isExample>
+        <esther:isExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">"The man ran a hundred miles, but out of time." (McGuigan)</esther:isExample>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zeugma connects unexpected items in a sentence by a shared word. It adds a feeling of interconnectedness and makes something appear as cohesive and pleasing to read. (McGuigan)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zeugma</rdfs:label>
         <rdfs:seeAlso xml:lang="de">Zeugma</rdfs:seeAlso>
         <rdfs:seeAlso xml:lang="sr">Zeugma</rdfs:seeAlso>
@@ -4117,9 +4117,9 @@ This is the place where Christ will come, as will here appear after.</esther:isE
     
 
 
-    <!-- https://kuehnram.de/esther.owl#??EinteilungStimmtNichtAphorismus -->
+    <!-- https://kuehnram.de/esther.owl#Aphorismus -->
 
-    <owl:NamedIndividual rdf:about="https://kuehnram.de/esther.owl#??EinteilungStimmtNichtAphorismus">
+    <owl:NamedIndividual rdf:about="https://kuehnram.de/esther.owl#?Aphorismus">
         <rdf:type rdf:resource="https://kuehnram.de/esther.owl#RhetoricalFigure"/>
         <rdf:type>
             <owl:Restriction>
