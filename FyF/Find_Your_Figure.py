@@ -63,7 +63,7 @@ def user_inputter():
         except ValueError:
             continue
     print()
-
+# ask as long as input is wrong
     while True:
         try:
             # noinspection PyUnboundLocalVariable
