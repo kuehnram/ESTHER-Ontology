@@ -23,101 +23,110 @@ Q10: Which figures are the opposite of other figures?
 import rdflib
 
 g = rdflib.Graph()
-g.parse('C:/Users/kuehn21/Documents/Paper/2023 - FOIS_ESTHER EnglishOntology/esther - Kopie.owl', format='application/rdf+xml')
+g.parse('C:/Users/kuehn21/Documents/Paper/2023 - FOIS_ESTHER EnglishOntology/esther - Kopie.owl',
+        format='application/rdf+xml')
 esther = rdflib.Namespace('https://kuehnram.de/')
 g.bind('esther', esther)
 
-
 # Q1: Which rhetorical figures have their defining element in a word?
 cq1 = """
-SELECT distinct ?Figure
+SELECT ?figure
 WHERE {
-    ?Figure esther:IsInArea ?Area .
-    ?Area rdfs:label ?AreaName .
-    Filter (?AreaName = "Word" ) }
+  ?figure rdf:type esther:RhetoricalFigure ;
+          esther:isInArea esther:Word .
+}
+
 """
 
 # Q2: In which rhetorical figures is a letter omitted?
 cq2 = """
-SELECT distinct ?Figure
+SELECT  ?figure
 WHERE {
-    ?Figure esther:IsOmitted ?Element .
-    ?Element rdfs:label ?ElementName .
-    Filter (?ElementName = "Letter" ) }
+    ?figure rdf:type esther:RhetoricalFigure ;
+            esther:isOmitted esther:Letter .
+}
 """
 
 # Q3: What are figures that are neither figures of construction, nor figures of speech, nor figures of thought?
 cq3 = """
-SELECT distinct ?Figure
+SELECT ?figure
 WHERE {
-    ?Figure esther:IsRhetoricalGroup ?Group .
-    ?Group rdfs:label ?GroupName .
-    Filter (?GroupName != "FigureOfConstruction" && ?GroupName != "FigureOfThought" && ?GroupName != "FigureOfSpeech") }
+  ?figure rdf:type esther:RhetoricalFigure.
+  FILTER NOT EXISTS {
+    ?figure esther:isRhetoricalGroup esther:FigureOfConstruction.
+  }
+  FILTER NOT EXISTS {
+    ?figure esther:isRhetoricalGroup esther:FigureOfThought.
+  }
+  FILTER NOT EXISTS {
+    ?figure esther:isRhetoricalGroup esther:FigureOfSpeech.
+  }
+}
 """
 
 # Q4: Which figures belong to the rhetorical group of tropes (should be the same output as Q3)?
 cq4 = """
-SELECT distinct ?Figure
+SELECT distinct ?figure
 WHERE {
-    ?Figure esther:IsRhetoricalGroup ?Group .
-    ?Group rdfs:label ?GroupName .
-    Filter (?GroupName = "Trope") }
+    ?figure rdf:type esther:RhetoricalFigure ;
+        esther:isRhetoricalGroup esther:Trope
+    }
 """
 
 # Q5: What is an example sentence for the figure alliteration?
 cq5 = """
-SELECT distinct ?Figure ?Example ?Value
+SELECT ?example
 WHERE {
-    ?Figure rdfs:label ?FigureName .
-    ?Figure esther:IsExample ?Value
-    Filter (?FigureName = "Alliteration") }
+  esther:Alliteration esther:isExample ?example .
+}
 """
 
 # Q6: What is the definition of the figure parallelism?
-cq6 = """
-SELECT distinct ?Figure ?Definition ?Value
+cq6= """
+SELECT distinct ?definition
 WHERE {
-    ?Figure rdfs:label ?FigureName .
-    ?Figure rdfs:comment ?Value
-    Filter (?FigureName = "Parallelism") }
+    esther:Parallelism rdfs:comment ?definition .
+ }
 """
+
+
 
 # Q7: Which figures of speech or figures of thought have their defining element in the beginning?
 cq7 = """
-SELECT distinct ?Figure
+SELECT distinct ?figure
 WHERE {
-    ?Figure esther:IsRhetoricalGroup ?Group .
-    ?Group rdfs:label ?GroupName .
-    ?Figure esther:IsInPosition ?Position .
-    ?Position rdfs:label ?PositionLocation .
-    Filter ((?GroupName = "FigureOfSpeech" || ?GroupName = "FigureOfThought") && ?PositionLocation = "Beginning") }
+    ?figure esther:isRhetoricalGroup ?group .
+    ?figure esther:isInPosition esther:Beginning .
+    ?group rdfs:label ?groupName .
+    Filter (?groupName = "FigureOfSpeech" || ?groupName = "FigureOfThought") }
 """
 
-# Q8: Which figures have  repeat an element in the same form?
+
+
+
+# Q8: Which figures repeat an element in the same form?
 cq8 = """
-SELECT distinct ?Figure
+SELECT distinct ?figure
 WHERE {
-    ?Figure esther:IsRepeatableElementOfSameForm ?_ .
+    ?figure esther:isRepeatableElementOfSameForm ?_ .
 }
 """
 
 # Q9: In which figures is a word in the same form repeated?
 cq9 = """
-SELECT distinct ?Figure
+SELECT distinct ?figure
 WHERE {
-    ?Figure esther:IsRepeatableElementOfSameForm ?Element .
-    ?Element rdfs:label "WordElement" .
+    ?figure esther:isRepeatableElementOfSameForm esther:WordElement .
 }
 """
 
 # Q10: Which figures are the opposite of other figures?
 cq10 = """
-SELECT distinct ?FigureA ?FigureB
+SELECT distinct ?figureA ?figureB
 WHERE {
-    ?FigureA esther:IsOppositeFigure ?FigureB .
+    ?figureA esther:isOppositeFigure ?figureB .
 }
 """
-
 
 print("Competency Question Q1: Which rhetorical figures have their defining element in a word?")
 result = g.query(cq1)
@@ -125,20 +134,23 @@ print(f"Number of matching rhetorical figures: {len(result)}")
 for row in result:
     print(row)
 
+
 print("\nCompetency Question Q2: In which rhetorical figures is a letter omitted?")
 result = g.query(cq2)
 print(f"Number of matching rhetorical figures: {len(result)}")
 for row in result:
     print(row)
 
-print("\nCompetency Question Q3: What are figures that are neither figures of construction, nor figures of speech, nor figures of thought?"
-      "nor figures of thought.")
+print(
+    "\nCompetency Question Q3: What are figures that are neither figures of construction, nor figures of speech, nor figures of thought?"
+    "nor figures of thought.")
 result = g.query(cq3)
 print(f"Number of matching rhetorical figures: {len(result)}")
 for row in result:
     print(row)
 
-print("\nCompetency Question Q4: Which figures belong to the rhetorical group of tropes (should be the same output as Q3)?")
+print(
+    "\nCompetency Question Q4: Which figures belong to the rhetorical group of tropes (should be the same output as Q3)?")
 result = g.query(cq4)
 print(f"Number of matching rhetorical figures: {len(result)}")
 for row in result:
@@ -156,19 +168,20 @@ print(f"Number of matching rhetorical figures: {len(result)}")
 for row in result:
     print(row)
 
-print("\nCompetency Question Q7: Which figures of speech or figures of thought have their defining element in the beginning?")
+print(
+    "\nCompetency Question Q7: Which figures of speech or figures of thought have their defining element in the beginning?")
 result = g.query(cq7)
 print(f"Number of matching rhetorical figures: {len(result)}")
 for row in result:
     print(row)
 
-print("\nCompetency Question Q8: Which figures have  repeat an element in the same form?")
+print("\nCompetency Question Q8: Which figures repeat an element in the same form?")
 result = g.query(cq8)
 print(f"Number of matching rhetorical figures: {len(result)}")
 for row in result:
     print(row)
 
-print("\nCompetency Question Q9: In which figures is a word in the same form repeated?")
+print("\nCompetency Question Q9: Which figures repeat a word in the same form?")
 result = g.query(cq9)
 print(f"Number of matching rhetorical figures: {len(result)}")
 for row in result:
@@ -179,4 +192,3 @@ result = g.query(cq10)
 print(f"Number of matching rhetorical figures: {len(result)}")
 for row in result:
     print(row)
-
